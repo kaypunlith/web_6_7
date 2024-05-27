@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    /* body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: darkgray;
+    } */
+    .Form{
+        position: relative;
+        padding: 20px;
+        width: 400px;
+        height: 400px;
+        background-color:rgb(156, 155, 155);
+        margin: auto;
+        margin-top: 60px;
+        display: none;
+        transition: 0.8s linear;
+    }
+    .Fomr2{
+        padding: 20px;
+        width: 400px;
+        height: 400px;
+        background-color:rgb(156, 155, 155);
+        margin: auto;
+        margin-top: 60px;
+        display: none;
+        transition: 0.8s linear;
+        background-color: red;
+    }
+    .icon{
+        position: absolute;
+        top: 0;
+        right:0;
+        background-color: black;
+        padding: 8px;
+        color: white;
+    }
+</style>
+<body>
+    <div class="container-fluid bg-dark text-light p-3">
+        <div class="container d-flex justify-content-between     ">
+            <h2>Product</h2>
+            <button class="btn btn-success" id="btn-add">Add product</button>
+        </div>
+    </div>
+    <div class="Form">
+        <label for="" class="form-label">Input code</label>
+        <input type="text" placeholder="Enter code" id="code" class="form-control">
+        <label for="" class="form-label">Input Name</label>
+        <input type="text" placeholder="Enter code" id="name" class="form-control">
+        <label for="" class="form-label">Input QTY</label>
+        <input type="text" placeholder="Enter code" id="qty" class="form-control">
+        <label for="" class="form-label">Input Price</label>
+        <input type="text" placeholder="Enter code" id="price" class="form-control">
+        <div class="mt-2 float-end">
+            <button class="btn btn-primary" id="btn-sub">Submit</button>
+            <button class="btn btn-danger">Cenecl</button>
+        </div>
+        <div class="icon"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+    <div class="Fomr2">
+        <label for="" class="form-label">Output Total</label>
+        <input type="text" placeholder="Enter code" id="total" class="form-control">
+        <label for="" class="form-label">Output Discont</label>
+        <input type="text" placeholder="Enter code" id="dis" class="form-control">
+        <label for="" class="form-label">Output  Payemnt</label>
+        <input type="text" placeholder="Enter code" id="pay" class="form-control">
+
+    </div>
+</body>
+<script>
+    var btn_left=document.querySelector(".icon");
+    var Form=document.querySelector(".Form");
+    var btn_add=document.getElementById("btn-add");
+    var Form2=document.querySelector(".Fomr2");
+    //  var code=document.getElementById("code");
+    //  var Name=document.getElementById("name");
+     var qty=document.getElementById("qty");
+     var price=document.getElementById("price");
+    var btn_sub=document.getElementById("btn-sub");
+    var total=document.getElementById("total");
+    var dis=document.getElementById("dis");
+    var pay=document.getElementById("pay");
+   
+    // console.log(Form);
+    btn_left.addEventListener("click",function(){
+    Form.style.display="none";
+    })
+    btn_add.addEventListener("click",function(){
+        Form.style.display="block";
+    })
+    function Total(){
+        return qty.value*price.value;
+    }
+    function Discount(){
+        if(Total()>1 && Total()<=10){
+            return Total()*10/100;
+        }else if(Total()>10 && Total()<=20){
+            return Total()*20/100;
+        }else if(Total()>20 && Total()<=30){
+            return Total()*30/100;
+        }else if(Total()>30 && Total()<=40){
+            return Total()*40/100;
+        }else if(Total()>40 && Total()<=50){
+            return Total()*20/100;
+        }else{
+            return Total()*70/100;
+        }
+    }
+    function Paymenut(){
+        return Total()-Discount();
+    }
+    btn_sub.addEventListener("click",function(){
+        Form.style.display="none";
+        Form2.style.display="block";
+        total.value=Total();
+        dis.value=Discount();
+        pay.value=Paymenut();
+    })
+</script>
+</html>

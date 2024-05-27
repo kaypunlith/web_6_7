@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./file_jq.js"></script>
+<style>
+    .btn-like{
+        float: left;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+</style>
+</head> 
+<body>
+      <div class="btn-like" data-op="1">Like</div>
+      <div class="btn-like" data-op="1">Like</div>
+      <div class="btn-like" data-op="1">Like</div>
+      <div class="btn-like" data-op="1">Like</div>
+     
+</body>
+<script>
+    $(document).ready(function(){
+        $(".btn-like").click(function(){
+            var eThis=$(this);
+            var op=eThis.data("op");
+            if(op==1){
+                 eThis.css({"color":"red"});
+                eThis.data("op","2");
+            }else{
+                eThis.css({"color":"black"});
+                 eThis.data("op","1");
+
+            }
+        })
+    })
+</script>
+</html>

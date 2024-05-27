@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="in">
+    <button type="button" id="btn">Click me</button>
+</body>
+<script>
+    var input=document.querySelector(".in");
+      document.getElementById("btn").onclick=function(){
+        alert(input.value)
+        if(input.value=="admin"){
+            input.style.border="2px solid blue";
+        }else{
+            input.style.border="2px solid red";
+        }
+      }
+</script>
+</html>

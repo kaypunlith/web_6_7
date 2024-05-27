@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/Jquery/file_jq.js"></script>
+</head>
+<style>
+        /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+        button{
+            padding:5px 10px;
+        }
+    .demo{
+        margin: 0;
+        padding: 0;
+        width: 400px;
+        height: 300px;
+        background-color: red;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .box{
+        width: 80px;
+        height: 80px;
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        
+    }
+</style>
+<body>
+    <button id="btn">add</button>
+    <div class="demo">
+        <!-- <div class="box">1</div> -->
+    </div>
+</body>
+<script>
+  $(document).ready(function(){
+    var i=0;
+    $("#btn").click(function(){
+        // var box=`<div class="box">${i}</div>`;
+        $(".demo").append(`<div class="box">${i}</div>`);
+        i++;
+    })
+  })
+</script>
+</html>

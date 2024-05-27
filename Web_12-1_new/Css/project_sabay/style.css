@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 200vh;
+}
+.logo-container{
+    width: 100%;
+    /* height: 120px; */
+    background-color: black;
+    padding:6px;
+}
+.top-menu{
+    width:75%;
+    height: 100%;
+    margin: auto;
+    /* background-color: red; */
+    display: flex;
+  
+}
+.top-menu .logo{
+    width: 20%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.top-menu .logo img{
+    height: 90px;
+}
+.top-menu .ads{
+    width: 79%;
+    margin-left: 1%;
+    height: 100%;
+    
+    /* background-color: palevioletred; */
+}
+.top-menu .ads img{
+    /* width: 100%; */
+    height: 100%;
+    float: right;
+}
+.Menu{
+    width: 100%;
+    /* height: 70px; */
+    background-color: red;
+}
+.Menu .menu-list{
+    width: 75%;
+    height: 100%;
+    /* background-color: blue; */
+    margin: auto;
+}
+.Menu .menu-list ul li{
+    display: inline-block;
+}
+.Menu .menu-list ul li a{
+    display: block;
+    padding: 13px;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-family: "Koulen", sans-serif;
+}
+.active{
+    background-color: rgba(169, 23, 23, 0.742);
+}
+section{
+    margin-top: 10px;
+
+}
+.slid-container{
+ 
+    width: 75%;
+    height: 550px;
+    /* background-color: red; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.slid-container .slid-box1{
+    width: 70%;
+    height: 100%;
+    background-color: black;  
+}
+.slid-container .slid-box1 .slid-item-box{
+    width: 100%;
+    height:50%;
+    background-color: yellow;
+    display: flex;
+}
+.slid-container .slid-box1 .slid-item-box .box-left{
+    width: 60%;
+    height: 100%;
+    background-color: palegreen;
+    position: relative;
+}
+.slid-container .slid-box1 .slid-item-box .box-left::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+.slid-container .slid-box1 .slid-item-box .box-left .box-time{
+    position: absolute;
+    bottom:8px;
+    left:5px;
+    font-size: 22px;
+    color: white;
+}
+.slid-container .slid-box1 .slid-item-box .box-left .box-title{
+    position: absolute;
+    bottom:50px;
+    left: 5px;
+    transition: 0.8s;
+}
+.slid-container .slid-box1 .slid-item-box .box-left .box-title h1{
+    font-size: 21px;
+    color: white;
+    font-family: "Koulen", sans-serif;
+}
+.slid-container .slid-box1 .slid-item-box .box-left .box-des{
+    position: absolute;
+    bottom:0;
+    left: 5px;
+    transition: 0.8s;
+}
+.slid-container .slid-box1 .slid-item-box .box-left:hover .box-des{
+    position: absolute;
+    bottom:0px;
+    left: 5px;
+
+}
+.slid-container .slid-box1 .slid-item-box .box-left .box-des p{
+    color: white;
+    font-size: 19px;
+    font-family: "Battambang", system-ui;
+    display: none;
+   
+}
+.slid-container .slid-box1 .slid-item-box .box-left:hover .box-title{
+    position: absolute;
+    bottom:100px;
+    left: 5px
+}
+.slid-container .slid-box1 .slid-item-box .box-left:hover .box-title h1{
+    color: red;
+}
+.slid-container .slid-box1 .slid-item-box .box-left:hover .box-des p{
+    display: block;
+}
+.slid-container .slid-box1 .slid-item-box .box-left:hover::before{
+    background-image: linear-gradient(to top,rgb(11, 11, 11),rgba(127, 127, 127, 0.411)); 
+}
+
+
+.slid-container .slid-box1 .slid-item-box .box-left .box-time{
+    position: absolute;
+    bottom:8px;
+    left:5px;
+    font-size: 22px;
+    color: white;
+}
+.slid-container .slid-box1 .slid-item-box .box-left .box-title{
+    position: absolute;
+    bottom:50px;
+    left: 5px;
+    transition: 0.8s;
+}
+.slid-container .slid-box1 .slid-item-box .box-left .box-title h1{
+    font-size: 21px;
+    color: white;
+    font-family: "Koulen", sans-serif;
+}
+.slid-container .slid-box1 .slid-item-box .box-left .box-des{
+    position: absolute;
+    bottom:0;
+    left: 5px;
+    transition: 0.8s;
+}
+.slid-container .slid-box1 .slid-item-box .box-right .box-title{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    transition: 0.4s linear;
+}
+.slid-container .slid-box1 .slid-item-box .box-right .box-time{
+    position: absolute;
+    bottom:10px;
+    font-size: 22px;
+    color: white;
+    left: 0;
+}
+.slid-container .slid-box1 .slid-item-box .box-right .box-title h1{
+    font-size: 21px;
+    color: white;
+    font-family: "Koulen", sans-serif;
+}
+.slid-container .slid-box1 .slid-item-box .box-right .box-des{
+    transition: 0.8s;
+}
+.slid-container .slid-box1 .slid-item-box .box-right:hover .box-des{
+    position: absolute;
+    bottom:40px;
+    left: 5px;
+}
+.slid-container .slid-box1 .slid-item-box .box-right .box-des p{
+    color: white;
+    font-size: 19px;
+    font-family: "Battambang", system-ui;
+    display: none;
+   
+}
+.slid-container .slid-box1 .slid-item-box .box-right:hover .box-title{
+    position: absolute;
+    bottom:100px;
+    left: 5px
+}
+.slid-container .slid-box1 .slid-item-box .box-right:hover .box-title h1{
+    color: red;
+}
+.slid-container .slid-box1 .slid-item-box .box-right:hover .box-des p{
+    display: block;
+    
+}
+.slid-container .slid-box1 .slid-item-box .box-right:hover::before{
+    background-image: linear-gradient(to top,rgb(11, 11, 11),rgba(127, 127, 127, 0.411)); 
+}
+.title-box{
+    position: absolute;
+    top:3px;
+    left:3px;
+    width: 120px;
+    height: 40px;
+    background-color: blue;
+    clip-path: polygon(0 0, 86% 0, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Koulen", sans-serif;
+
+}
+.slid-container .slid-box1 .slid-item-box .box-left img{
+    width: 100%;
+    height:100% ;
+    object-fit: cover;
+}
+.slid-container .slid-box1 .slid-item-box .box-right{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(138, 138, 138);
+    position: relative;
+}
+.slid-container .slid-box1 .slid-item-box .box-right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.306);
+}
+.slid-container .slid-box1 .slid-item-box .box-right img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.slid-container .slid-box2{
+    width:29%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.slid-container .slid-box2 .box-ads{
+   width: 100%;
+   height: 49%;
+   background-color: rgb(0, 0, 0);
+}
+.slid-container .slid-box2 .box-ads img{
+    width: 100%;
+    height: 100%;
+}
+section .title-item{
+    margin-top: 10px;
+}
+.title-item{
+   width: 75%;
+    margin: auto;
+    height: 60px;
+    /* background-color: red;   */
+    border-bottom: 4px solid blue;  
+}
+.feter-box{
+    width: 16%;
+    height: 100%;
+    background-color: blue;
+    clip-path: polygon(0 0, 69% 0, 100% 100%, 0% 100%);
+    display:flex;
+    justify-content: center;
+    align-items: center;    
+    padding-right: 50px;
+    color: white;
+    display: 22px;
+    font-family: "Koulen", sans-serif;
+}
+.slid-container2{
+    width: 75%;
+    margin: auto;
+    height: 850px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.slid-container2 .main-box{
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.main-box .box-top{
+    width: 100%;
+    height: 45%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+
+}
+.main-box .box-top .list-box{
+    width: 33%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+.main-box .box-top .list-box .box-img{
+    width: 100%;
+    height: 70%;
+    /* background-color: black; */
+}
+.main-box .box-top .list-box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-box .box-top .list-box .box-txt{
+    width: 100%;
+    height: 30%;
+    /* background-color: aqua; */
+    padding: 5px;
+       font-family: "Koulen", sans-serif;
+}
+.main-box .box-buttom{
+    width: 70%;
+    height:55%;
+    /* background-color: rgb(99, 99, 98); */
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+}
+.main-box .box-buttom .contan{
+    width: 100%;
+    height:49%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+}
+.main-box .box-buttom .contan .cotnan-box{
+    width: 24%;
+    height: 100%;
+    /* background-color: rgb(89, 89, 100); */
+}
+.main-box .box-buttom .contan .cotnan-box .contan-img{
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    /* background-color: red; */
+}
+.main-box .box-buttom .contan .cotnan-box .contan-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-box .box-buttom .contan .cotnan-box .contan-img img:hover{
+    transform:scale(1.1);
+}
+.main-box .box-buttom .contan .cotnan-box .contan-txt{
+    width: 100%;
+    height: 30%;
+    /* background-color: rgb(125, 125, 176); */
+    padding: 5px;
+    overflow: hidden;
+}
+.main-box .box-buttom .contan .cotnan-box .contan-txt p{
+    font-family: "Battambang", system-ui;
+}

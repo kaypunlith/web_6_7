@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1"><br><br>
+    <input type="text" id="input2"><br><br>
+    <input type="text" id="re"><br><br>
+    <input type="button" value="submit" id="btn">
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+        var num=document.getElementById("input1").value;
+        var num1=document.getElementById("input2").value;
+        var total=Number(num)+Number(num1);
+        document.getElementById("re").value=total;
+    })
+</script>
+</html>

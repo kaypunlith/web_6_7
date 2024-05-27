@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contan-box{
+    height: 400px;
+    /* background-color: red; */
+}
+.box-img{
+    width: 100%;
+    height: 50%;
+    background-color: blue;
+}
+.box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box-txt{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(230, 0, 0);
+}
+.box-txt h1{
+    font-size: 22px;
+    padding: 5px;
+    color: white;
+}
+.box-txt p{
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+}
+.box-txt a{
+    display: block;
+    width: 60px;
+    height: 35px;
+    border-radius: 3px;
+    background-color: blue;
+    margin-left: 10px;
+    padding:3px;
+    text-decoration: none;
+    color: white;
+
+}
+/* Extra larg */
+@media(min-width:1200px){
+    .box-txt h1{
+        font-size: 18px;
+        padding: 5px;
+        color: white;
+    }
+    .box-txt p{
+        padding: 5px;
+        font-size:18px;
+        color: white;
+    }
+
+}
+ /* Large devices (desktops, 992px and up) */
+@media(min-width:992px) and (max-width:1199.98px){
+    .box-txt h1{
+        font-size: 12px;
+        padding: 5px;
+        color: white;
+    }
+    .box-txt p{
+        padding: 5px;
+        font-size:12px;
+        color: white;
+    }
+}
+
+
+/* Medium device */
+@media(min-width: 768px) and (max-width:991.98px){
+    .box-txt h1{
+        font-size: 16px;
+        padding: 5px;
+        color: white;
+    }
+    .box-txt p{
+        padding: 5px;
+        font-size:16px;
+        color: white;
+    }
+
+}
+/*small device*/
+@media(min-width:576px) and (max-width:767.98px){
+    .contan-box{
+        height:250px;
+    }
+    .box-item{
+        display: flex;
+    }
+    .box-img{
+        height:233px;
+    }
+    .box-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .box-txt a{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        float: right;
+    
+    }
+}
+
+/*Extra small device  */
+@media(max-width:575px){
+
+
+}

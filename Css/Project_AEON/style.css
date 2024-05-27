@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "Hanuman", serif;
+}
+header{
+    width: 100%;
+    height: 110px;
+    /* background-color: black; */
+    background-color: #FA04B4;
+}
+.header-top{
+    width: 100%;
+    height:40%;
+    background-color:#eedbbe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-top h1{
+    font-size: 18px;
+}
+.header-button{
+    width: 80%;
+    /* height: 60%; */
+    margin: auto;
+    background-color:#FA04B4 ;
+    display: flex;
+    justify-content: space-between;
+}
+.header-button ul{
+    display: flex;
+    padding: 20px 10px 5px 1px;
+    margin-left: 10px;
+}
+.header-button ul .icon{
+    margin-right: 10px;
+}
+.header-button ul i{
+    margin-left: 10px;
+    color: white;
+    font-size: 22px;
+    position: relative;
+    top:5px;
+}
+.header-button ul p{
+    color: white;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.header-button ul img{
+    height:40px;
+    margin-right: 200px;
+}
+.header-button ul .img{
+    width: 40px;
+    height: 30px;
+    background-color: blue;
+    margin-left: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    /* position: absolute; */
+}
+
+.header-button ul .txt p{
+    font-size: 18px;
+    position: relative;
+    top: 13px;
+}
+.header-button ul .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+header .header-3{
+    width: 80%;
+    /* height:70px; */
+    /* background-color: rgb(243, 0, 0); */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+header .header-3 ul{
+    display: flex;
+    padding: 10px;
+ 
+}
+header .header-3 ul i{
+    margin-left: 10px;
+}
+header .header-3 ul p{
+    margin-left: 5px;
+}
+header .header-3 .box-search{
+    width:250px;
+    border-radius: 10px;
+    height:30px;
+    border: 1px solid black;
+    display: flex;
+    overflow: hidden;
+}
+header .header-3 .box-search input{
+    width: 80%;
+    height: 100%;
+     background: none;
+     border: none;
+     padding: 8px;
+     outline: none;
+}
+header .header-3 .box-search .btn-search{
+    width: 20%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+section{
+    margin-top:45px;
+
+}
+.slid-container{
+    width: 80%;
+    height: 200vh;
+    background-color:white;
+    box-shadow: 1px 1px 5px 0px black;
+    margin: auto;
+    display: flex;
+    padding: 15px;
+}
+.slid-left{
+    width: 30%;
+    height: 100%;
+    background-color: black;
+}
+.slid-right{
+    width: 70%;
+    height:100%;
+    /* background-color: yellow; */
+
+}
+.slid{
+    width: 98%;
+    background-color: blue;
+    height: 300px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius:15px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.mySwiper{
+    height: 100%;
+}
+.mySwiper img{
+    width: 100%;
+    height: 100%;
+}
+.slid2{
+    width: 98%;
+    margin: auto;
+    height: 200px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rgb(0, 0, 0); */
+}
+.box{
+    position: relative;
+    width: 32%;
+    height: 100%;
+    border-radius: 18px;
+background-color:#eee;
+overflow: hidden;
+/* box-shadow: 1px 1px 5px 0px black; */
+}
+.title{
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(44deg,#d8cfcf 20%,#f5f7fa);
+}
+.title p{
+    padding: 10px;
+    font-size: 22px;
+}
+.box-img{
+    position: absolute;
+    right:0;
+    bottom: 20px;
+    width: 120px;
+    height: 130px;
+    /* border-radius: 50%; */
+    /* background-color: red; */
+    overflow: hidden;
+}
+.box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.box-img img:hover{
+
+    transform: scale(1.1);
+}
+.card{
+    width: 32%;
+    height: 300px;
+    background-color: red;
+    margin-left: 10px;
+    border-radius: 20px;
+   margin-top: 5px;
+}
+.cantan-card{
+    width: 100%;
+    height:62%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(21, 255, 0);
+}
+
+ 

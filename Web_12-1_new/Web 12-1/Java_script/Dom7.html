@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    input : <input type="text" id="input"><br><br>
+    result : <input type="text" id="re"><br><br>
+    <button type="button" id="btn">Click Me</button>
+</body>
+<script>
+    document.getElementById("btn").onclick=function(){
+        var input=document.getElementById("input").value;
+         document.getElementById("re").value=input;
+    }
+</script>
+</html>

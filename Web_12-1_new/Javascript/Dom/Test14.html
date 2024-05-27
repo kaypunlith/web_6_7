@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            position: relative;
+        }
+        .menu{
+            width: 100%;
+            background-color: black;
+            display: flex;
+        }
+        .menu ul li{
+            
+            display: inline-block;
+        }
+        .menu ul li a{
+            display: block;
+            padding: 14px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .contan{
+            width: 80%;
+            height:auto;
+            /* background-color: black; */
+            display: flex;
+            margin: auto;
+            margin-top: 10px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .item-box{
+            width: 24%;
+            height: 400px;
+            background-color: red;
+            margin-bottom: 8px;
+        }
+        .box-img{
+            width: 100%;
+            height: 50%;
+            background-color: rgb(235, 235, 235);
+        }
+        .box-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .box-txt{
+            width: 100%;
+            height: 50%;
+            background-color:white;
+            box-shadow: 1px 1px 5px 0px black;
+        }
+        .box-txt p{
+            padding: 7px;
+            font-size: 21px;
+            font-weight: 700;
+        }
+        .box-txt button{
+            margin-left: 100px;
+            padding: 15px 18px;
+            border: none;
+            color: white;
+            margin-top: 10px;
+            background-color: black;
+
+        }
+        .Detail_product{
+          position: absolute;
+          right:0;
+          top:50px;
+          width: 400px;
+          height:auto;
+          background-color:black;
+        }
+        .Detail_product table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .Detail_product table tr th{
+            color: white;
+            padding: 10px;
+        }
+        .Detail_product table tr td{
+            padding: 8px;
+            color: white;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul class="sub-menu">
+            <!-- <li>
+                <a href="">About</a>
+            </li> -->
+            
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><input type="text" class="search"></a>
+            </li>
+            <li>
+                <button type="button" id="btn">Search</button>
+            </li>
+        </ul>
+   
+    </div>
+ 
+    <div class="contan">
+    </div>
+    <div class="Detail_product">
+        <table border="1" class="showdata">
+            <tr>
+                <th >ID</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+           
+            
+        </table>
+    </div>
+</body>
+<script>
+   function GetMenu(){
+     const Menu=[
+        {"name":"Home","color":"blue"},
+        {"name":"About","color":"red"},
+        {"name":"Contect","color":"yellow"},
+        {"name":"Profile","color":"pink"},
+        {"name":"Other","color":"green"},
+     ]
+     var txt=""
+     for (const M of Menu) {
+        txt+=`
+          <li>
+                <a href="" style="color:${M.color}">${M.name}</a>
+            </li>
+        `
+        document.querySelector(".sub-menu").innerHTML=txt;
+     }
+   
+   
+   }
+   const prodcuts=[
+          {
+            "id":"1",
+            "title":"lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem.",
+            "img":"../photo/coffee1.jpeg"
+          },
+          {
+            "id":"2",
+            "title":"lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem.",
+            "img":"../photo/coffee2.jpeg"
+          },
+          {
+            "id":"3",
+            "title":"lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem.",
+            "img":"../photo/coffee3.jpeg"
+          },
+          {
+            "id":"4",
+            "title":"lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem.",
+            "img":"../photo/coffee4.jpeg"
+          },
+          {
+            "id":"5",
+            "title":"lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem.",
+            "img":"../photo/coffee1.jpeg"
+          },
+          {
+            "id":"6",
+            "title":"lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem.",
+            "img":"../photo/coffee2.jpeg"
+          },
+          {
+            "id":"7",
+            "title":"lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem.",
+            "img":"../photo/coffee3.jpeg"
+          },
+          {
+            "id":"8",
+            "title":"lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem.",
+            "img":"../photo/coffee4.jpeg"
+          },
+        ]
+       GetMenu();
+
+     function Getproduct(){
+        var txt1=""
+        for (const pro of prodcuts){
+            txt1+=`
+            <div class="item-box">
+            <div class="box-img">
+                <img src=${pro.img} alt="">
+            </div>
+            <div class="box-txt">
+                <p>${pro.title}</p>
+                <button id="btn_add" type="button">Click Me</button>
+            </div>
+        </div>
+            
+            `
+            document.querySelector(".contan").innerHTML=txt1;
+        }
+      
+     }  
+      Getproduct();
+      function Search(id){
+          return id==document.querySelector(".search").value;
+      }
+      document.getElementById("btn").addEventListener("click",function(){
+        for(const item of prodcuts) {
+            var value_id=item.id;
+            document.querySelector(".contan").innerHTML=value_id.filter(Search);
+        };
+       
+      })
+      showProduct();
+      function showProduct(){
+     var btnadd=document.querySelectorAll("#btn_add");
+     var show_data=document.querySelector(".showdata");
+       btnadd.forEach((el,i)=>{
+        el.addEventListener("click",function(){
+            show_data.innerHTML+=`
+                <tr>
+                    <td >${prodcuts[i].id}</td>
+                    <td>${prodcuts[i].title}</td>
+                    <td><img src="${prodcuts[i].img}" alt=""style="width:80px;height:80px"></td>
+                    <td><button>Edite</button></td>
+                </tr>
+            `
+        })
+       })
+      }
+</script>
+</html>

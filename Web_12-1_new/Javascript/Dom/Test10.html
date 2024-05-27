@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="demo">Control statment</h1>
+    <input type="text" id="txt">
+    <button type="button" id="btn">Click Me</button>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+        // alert(1234);
+        var txt=document.getElementById("txt");
+        if(txt.value=="blue"){
+            document.querySelector(".demo").innerHTML="Blue";
+            document.querySelector(".demo").style.color="blue";
+        }else if(txt.value=="red"){
+            document.querySelector(".demo").innerHTML="Red";
+            document.querySelector(".demo").style.color="red";
+        }else if(txt.value=="green"){
+            document.querySelector(".demo").innerHTML="Green";
+            document.querySelector(".demo").style.color="green";
+        }
+    })
+</script>
+</html>

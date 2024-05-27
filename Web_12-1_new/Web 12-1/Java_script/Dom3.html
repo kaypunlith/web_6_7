@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: ;
+            align-items: ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hello box</div>
+    <button type="button" id="btn">Click</button>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+        var txt=document.querySelector(".box");
+        txt.style.backgroundColor="black";
+        txt.style.color="white";
+        txt.style.width="200px";
+        txt.style.height="200px";
+        txt.style.display="flex";
+        txt.style.justifyContent="center";
+        txt.style.alignItems="center";
+
+     
+    })
+</script>
+</html>

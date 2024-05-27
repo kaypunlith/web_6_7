@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+    <style>
+           .demo{
+        width: 400px;
+        height: 500px;
+        background-color: red;
+        padding: 20px;
+    }
+    .txt{
+        text-align: center;
+    }
+    .box1{
+        width: 220px;
+        height: 140px;
+        background-color: blue;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .box2{
+        width:100px;
+        height: 100px;
+        background-color: tomato;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <h1 class="txt">ETEC code</h1>
+         <div class="box1">
+            <div class="box2">
+                <input type="button" value="click" class="btn">
+            </div>
+         </div>
+         <div class="box1">
+            <div class="box2">
+                <input type="button" value="click" class="btn">
+            </div>
+         </div>
+        
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $(".btn").click(function(){
+            // $(this).parent().css({"background":"black"});
+            // $(this).parents(".demo").css({"background":"black"});
+            //  $(".txt").html("Hello");
+            $(this).parents(".demo").find(".txt").html("Hello php");
+            $(this).parents(".demo").find(".box1").eq(1).css({"background":"black"});
+        })
+    })
+</script>
+</html>

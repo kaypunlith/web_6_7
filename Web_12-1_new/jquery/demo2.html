@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body{
+            display: flex;
+        }
+        .btn-like{
+            font-weight: 600;
+            margin-left: 10px;
+            
+        }
+        /* button{
+            margin-left:10px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="btn-like" data-pt="1">Like</div>
+    <div class="btn-like" data-pt="1">Like</div>
+    <div class="btn-like" data-pt="1">Like</div>
+    <div class="btn-like" data-pt="1">Like</div>
+    <div class="btn-like" data-pt="1">Like</div>
+    <!-- <button type="button" id="btn">Click me</button> -->
+</body>
+<script>
+    $(document).ready(function(){
+      
+        $(".btn-like").click(function(){
+            var eThis=$(this);
+           var pt=eThis.data("pt");
+           if(pt==1){
+                eThis.css({"color":"red"});
+                eThis.data("pt","2")
+           }else{
+                eThis.css({"color":"black"});
+                eThis.data("pt","1")
+
+           }
+           
+        })
+    })
+</script>
+</html>

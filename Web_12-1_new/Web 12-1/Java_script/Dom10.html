@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    input <input type="text" id="txt"><br><br>
+    Result <input type="text" id="re"><br>
+</body>
+<script>
+    var txt=document.getElementById("txt");
+    var re=document.getElementById("re");
+    txt.addEventListener("keyup",function(){
+      if(txt.value>=50){
+        re.value="pass";
+      }else{
+         re.value="fail";
+      }
+    })
+</script>
+</html>

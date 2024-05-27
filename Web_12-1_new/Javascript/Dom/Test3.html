@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="txt1"><br><br>
+    <input type="text" class="txt2"><br><br>
+    <input type="text" class="op"><br><br>
+    <button type="button" id="btn">Add</button>
+</body>
+<script>
+    var txt1=document.querySelector(".txt1");
+    var txt2=document.querySelector(".txt2");
+    var op=document.querySelector(".op");
+    
+    document.getElementById("btn").addEventListener("click",function(){
+       op.value=parseInt(txt1.value)+parseInt(txt2.value);
+    })
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="demo">For in loop</h1>
+    <button type="button" id="btn">Click</button>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+       const color=["red","blue","green","pink","yallow"];
+       var i,txt="";
+        for (const i in color) {
+            console.log(color[i]);
+            txt+=color[i]+",";
+        }
+       
+       document.querySelector(".demo").innerHTML=txt;
+    })
+</script>
+</html>

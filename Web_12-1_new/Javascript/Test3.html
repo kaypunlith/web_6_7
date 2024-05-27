@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var arr=[10,20,30,40,50];
+    var i;
+    //for loop
+     for(i=0;i<5;i++){
+        document.write("value A="+arr[i]+"<br>");
+     }
+     // for each
+     document.write("_________________________"+"<br>")
+      arr.forEach((a)=>{
+        document.write(`value a=${a}<br>`)
+      })
+      // for of
+      document.write("_________________________"+"<br>")
+      for( a of arr){
+        document.write(`value a=${a}<br>`)
+      }
+      //
+      arr.map((a)=>{
+        document.write(`value a=${a}<br>`)
+      })
+</script>
+</html>

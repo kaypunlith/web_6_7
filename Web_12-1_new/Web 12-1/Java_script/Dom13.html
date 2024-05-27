@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .Menu{
+            background-color: red;
+            float: left;
+            width: 100%;
+         
+        }
+        .Menu ul{
+            list-style-type: none;
+        }
+        .Menu ul li{
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+        .Menu ul li a{
+            text-decoration: none;
+            padding: 10px 10px;
+            display: block;
+            color: antiquewhite;
+            font-size: 22px;
+            position: relative;
+            top: -10px;
+
+        }
+        .container{
+            /* background-color: red; */
+        }
+        .container .box{
+            width: 100%;
+            height: 300px;
+            /* background-color: blue; */
+        }
+       .box .item{
+        width: 100%;
+        height: 100%;
+        border: 2px solid red;
+        background-color: brown;
+        padding: 8px;
+       }
+       .item .img{
+        width: 100%;
+        height: 80%;
+        background-color: green;
+       }
+       .item .img img{
+        width: 100%;
+        height: 100%;
+       }
+       .item .txt{
+        width: 100%;
+        height: 20%;
+        background-color: tomato;
+       }
+    </style>
+</head>
+<body>
+    <div class="Menu">
+        <ul id="demo">
+            <!-- <li>
+                <a href="">Home</a>
+            </li>
+               <li>
+                <a href="">Home</a>
+            </li>
+               <li>
+                <a href="">Home</a>
+            </li>
+               <li>
+                <a href="">Home</a>
+            </li> -->
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row" id="demo1">
+            <!-- <div class="col-xxl-3 col-lg-3 box">
+                <div class="item">
+                    <div class="img">
+                        <img src="/photo/3.webp" alt="">
+                    </div>
+                    <div class="txt"></div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</body>
+<script>
+    getmenu();
+    function getmenu(){
+        var txt=""
+       
+        const Menus=["Home","About","contect","profile",];
+        // for(i in Menus){
+        //     txt+=`
+        //         <li>
+        //         <a href="">${Menus[i]}</a>
+        //       </li>
+        //     `
+        // }
+        Menus.map((M)=>{
+             console.log(M);
+             txt+=`
+                 <li>
+                 <a href="">${M}</a>
+                  </li>
+             `
+         
+        })
+        document.getElementById("demo").innerHTML=txt;
+    }
+    getitem();
+    function getitem(){
+         var txt1=""    
+        const Items=[
+                            {
+                    "id": 8,
+                    "title": "Nuevo Producto",
+                    "price": 428,
+                    "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+                    "images": [
+                    "https://i.imgur.com/5mPmJYO.jpeg",
+                    "https://i.imgur.com/G45P8tI.jpeg",
+                    "https://i.imgur.com/QEGACen.jpeg"
+                    ],
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-17T02:56:36.000Z",
+                    "category": {
+                    "id": 2,
+                    "name": "Electronics",
+                    "image": "https://i.imgur.com/fpT4052.jpeg",
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z"
+                    }
+                },
+                {
+                    "id": 9,
+                    "title": "Nuevo Producto",
+                    "price": 521,
+                    "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+                    "images": [
+                    "https://i.imgur.com/fpT4052.jpeg",
+                    "https://i.imgur.com/uDpzwEk.jpeg",
+                    "https://i.imgur.com/nCqOV7L.jpeg"
+                    ],
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-17T02:57:58.000Z",
+                    "category": {
+                    "id": 2,
+                    "name": "Electronics",
+                    "image": "https://i.imgur.com/fpT4052.jpeg",
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z"
+                    }
+                },
+                {
+                    "id": 10,
+                    "title": "Fantastic Fresh Soap",
+                    "price": 393,
+                    "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+                    "images": [
+                    "https://i.imgur.com/G45P8tI.jpeg",
+                    "https://i.imgur.com/Y5gHJMd.jpeg",
+                    "https://i.imgur.com/5mPmJYO.jpeg"
+                    ],
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z",
+                    "category": {
+                    "id": 3,
+                    "name": "Furniture",
+                    "image": "https://i.imgur.com/uDpzwEk.jpeg",
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z"
+                    }
+                },
+                {
+                    "id": 11,
+                    "title": "Handcrafted Fresh Tuna",
+                    "price": 327,
+                    "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+                    "images": [
+                    "https://i.imgur.com/zQwsC2m.jpeg",
+                    "https://i.imgur.com/gxaUWSF.jpeg",
+                    "https://i.imgur.com/GwylUgV.jpeg"
+                    ],
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z",
+                    "category": {
+                    "id": 2,
+                    "name": "Electronics",
+                    "image": "https://i.imgur.com/fpT4052.jpeg",
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z"
+                    }
+                },
+                {
+                    "id": 12,
+                    "title": "Luxurious Cotton Ball",
+                    "price": 926,
+                    "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+                    "images": [
+                    "https://i.imgur.com/0KlqHu9.jpeg",
+                    "https://i.imgur.com/imQx3Az.jpeg",
+                    "https://i.imgur.com/fpT4052.jpeg"
+                    ],
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z",
+                    "category": {
+                    "id": 4,
+                    "name": "Shoes",
+                    "image": "https://i.imgur.com/M3QKiC5.jpeg",
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z"
+                    }
+                },
+                {
+                    "id": 13,
+                    "title": "Small Bronze Shoes",
+                    "price": 154,
+                    "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+                    "images": [
+                    "https://i.imgur.com/G45P8tI.jpeg",
+                    "https://i.imgur.com/G45P8tI.jpeg",
+                    "https://i.imgur.com/rUWNzYa.jpeg"
+                    ],
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z",
+                    "category": {
+                    "id": 4,
+                    "name": "Shoes",
+                    "image": "https://i.imgur.com/M3QKiC5.jpeg",
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z"
+                    }
+                },
+                {
+                    "id": 14,
+                    "title": "Handmade Plastic Gloves",
+                    "price": 590,
+                    "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+                    "images": [
+                    "https://i.imgur.com/G45P8tI.jpeg",
+                    "https://i.imgur.com/x0K3SKA.jpeg",
+                    "https://i.imgur.com/5iNAL9T.jpeg"
+                    ],
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z",
+                    "category": {
+                    "id": 5,
+                    "name": "Others",
+                    "image": "https://i.imgur.com/aCDF0yh.jpeg",
+                    "creationAt": "2023-10-16T22:26:26.000Z",
+                    "updatedAt": "2023-10-16T22:26:26.000Z"
+                    }
+                },
+        ]
+
+       for(key in Items){
+         txt1+=`
+               <div class="col-xxl-3 col-lg-3 box mt-4">
+                <div class="item">
+                    <div class="img">
+                        <img src=${Items[key].images} alt="">
+                    </div>
+                    <div class="txt">${Items[key]['price']}</div>
+                </div>
+            </div> 
+         `
+       }
+       document.getElementById("demo1").innerHTML=txt1;
+    }
+</script>
+</html>

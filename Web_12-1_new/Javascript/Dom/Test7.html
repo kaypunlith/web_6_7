@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/Javascript/photo/car1.jpg"  id="img" style="width: 300px; height: 200px;" alt="" onmouseover="on_img()" onmouseleave="lv_img()" >
+    <button type="button" id="btn">Click1</button>
+    <button type="button" id="btn1">Click2</button>
+</body>
+<script>
+    var img=document.getElementById("img");
+    var btn=document.getElementById("btn");
+    var btn1=document.getElementById("btn1");
+    btn.onclick=function(){
+      img.setAttribute("src","/Javascript/photo/coffee3.jpeg")
+    }
+    btn1.onclick=function(){
+        img.setAttribute("src","/Javascript/photo/car1.jpg") 
+    }
+    function on_img(){
+        img.setAttribute("src","/Javascript/photo/coffee3.jpeg")
+    }
+    function lv_img(){
+        img.setAttribute("src","/Javascript/photo/car1.jpg") 
+    }
+</script>
+</html>

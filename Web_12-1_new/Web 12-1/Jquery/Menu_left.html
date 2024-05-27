@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./file_jq.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        position: relative;
+    }
+    .Menu{
+        background-color: red;
+    }
+    .Menu ul{
+        display: flex;
+        list-style-type: none;
+    }
+    .Menu ul li a{
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #fff;
+    }
+    .sub-menu{
+
+        width: 250px;
+        height: 100vh;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        /* display: none; */
+        left:-300px;
+        z-index: 1;
+    }
+    .sub-menu ul{
+        list-style-type: none;
+    }
+    .sub-menu ul li a{
+        display: block;
+        padding: 20px;
+        text-decoration:none;
+        color: white;
+        font-size: 22px;
+        margin-left: 50px;
+    }
+    .Menu ul li i{
+        color: white;
+        
+        margin: 10px;
+    }
+    .sub-menu ul li:hover{
+        background-color: blue;
+    }
+     .popup{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.335);
+        position: fixed;
+        top:0;
+    } 
+    .table table{
+        width: 50%;
+        margin: auto;
+        margin-top: 30px;
+    }
+     .table table tr th{
+        padding: 8px;
+        border: none;
+        background-color: blue;
+        color: white;
+        border-bottom: 2px solid black;
+     }
+     .table table tr td{
+        text-align: center;
+        padding: 8px;
+        border: none;
+         border-bottom: 2px solid black;
+         background-color: red;
+         color: white;
+     }
+     .form{
+        top: -200px;
+        width: 300px;
+        height: 300px;
+        background-color: rgb(244, 244, 244);
+        margin: auto;
+        padding: 10px;
+        position: relative;
+        display: none;
+        z-index: 111;
+     }
+     .icon{
+        position: absolute;
+        top: 0;
+        right:0;
+        background-color: white;
+        padding: 8px;
+        border-radius: 50%;
+     }
+
+</style>
+<body>
+    <div class="Menu">
+        <ul>
+            <li>
+                <i class="fa-solid fa-bars"></i>
+            </li>
+            <li>
+                <a href="">Home</a>
+            </li>
+             <li>
+                <a href="">About</a>
+            </li>
+             <li>
+                <a href="">Contect</a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="sub-menu">
+             <ul>
+           
+            <li>
+                <a href="">Home</a>
+            </li>
+             <li>
+                <a href="">About</a>
+            </li>
+             <li>
+                <a href="">Contect</a>
+            </li>
+
+        </ul>
+        </div>
+        <!-- <div class="popup"></div> -->
+        
+        <div class="table">
+           <table border="" >
+             <thead>
+                 <th colspan="3"> <button class="btn btn-success">Add</button></th>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+             </thead>
+             <tbody id="tbl">
+                <tr>
+                    <td>1</td>
+                    <td>coca</td>
+                    <td>4</td>
+                </tr>
+             </tbody>
+
+           </table>
+      </div>
+      <div class="form">
+        <label for="" class="form-label">Input ID</label>
+           <input type="text" class="form-control" id="id">
+           <label for="" class="form-label">Input name</label>
+           <input type="text" class="form-control" id="name">
+           <label for="" class="form-label">Input price</label>
+           <input type="text" class="form-control" id="price">
+           <div class="float-end mt-3">
+            <button class=" btn btn-success" id="sub">submit</button>
+            <button class=" btn btn-danger">Cencel</button>
+           </div>
+           <div class="icon">X</div>
+      </div>
+</body>
+<script>
+    $(document).ready(function(){
+        var popupo=` <div class="popup"></div>`;
+        var body=$("body");
+         var id=$("#id");
+         var name=$("#name");
+         var price=$("#price");
+        $(".fa-bars").click(function(){
+            $(".sub-menu").css({'left':'0'});
+            body.append(popupo);
+
+        })
+        $(body).on("click",".popup",function(){
+             $(".sub-menu").css({'left':'-333px'});
+             $(this).remove();  
+            
+        })
+        $(".btn").click(function(){
+            $(".form").css({'display':'block'});
+             body.append(popupo);
+        })
+        $(".icon").click(function(){
+             $(".form").css({'display':'none'});
+             $(".popup").remove();
+        })
+        var data=""
+        $("body").on("click","#sub",function(){
+            table.text+=`
+               <tr>
+                    <td>1</td>
+                    <td>coca</td>
+                    <td>4</td>
+                </tr>
+            ` 
+            // data+=`
+            // <tr>
+            //          <td>1</td>
+            //          <td>coca</td>
+            //          <td>10</td>
+            //      </tr>
+            // `
+            // $("#tbl").html=data;
+        })
+        
+    })
+</script>
+</html>

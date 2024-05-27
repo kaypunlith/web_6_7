@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="txt">Hello Java script</h1>
+    <button type="button" id="btn" >Click Me</button>
+</body>
+<script>
+    // function Demo(){
+    //     alert(123);
+    // }
+
+    // document.getElementById("btn").onclick=function(){
+    //     alert(123);
+    // }
+
+    // var btn=document.getElementById("btn");
+    // btn.onclick=function(){
+    //     alert(123);
+    // }
+       var i=0;
+     document.getElementById("btn").addEventListener("click",function(){
+       if(i==0){
+            document.getElementById("txt").innerHTML="Hello React js";
+            i=1;
+    }else{
+        document.getElementById("txt").innerHTML="Hello Jaca script"; 
+        i=0;
+    }
+     })
+
+</script>
+</html>

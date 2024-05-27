@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>`
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1 id="demo"></h1>
+      <h1 id="demo1"></h1>
+      <h1 id="demo2">Hello js</h1>
+      <button id="btn" type="button">click Me</button>
+</body>
+<script>
+    function SayHello(){
+        document.write("<h1>Hello my name is Dara</h1>");
+    }
+    function Login(pass,email){
+       if(pass==1234){
+        if(email=="addmin.com"){
+           swal("Login success!", "You clicked the button!", "success")
+        }else{
+              swal("Error email!", "You clicked the button!", "success")
+        }
+       }else{
+          swal("Error pass!", "You clicked the button!", "success")
+       }
+    }
+    function sum(a,b){
+        var s=a+b;
+        document.write("A+B="+s);
+    }
+    // SayHello();
+    // var pass,email;
+    // pass=prompt("Enter pass=");
+    // email=prompt("Enter email=");
+    // Login(pass,email);
+    // var a=prompt("Enter a=");
+    // var b=prompt("Enter b=");
+   
+    // sum(Number(a),Number(b));
+
+    function Sum1(){
+        var a=10,b=20;
+        return a+b;
+    }
+    function sum2(a,b){
+        return a-b;
+    }
+    document.getElementById("demo").innerHTML="value sum1="+Sum1();
+     document.getElementById("demo1").innerHTML="value sum2="+sum2(30,20);
+     var i=0;
+     document.getElementById("btn").addEventListener("click",function(){
+        if(i==0){
+             document.getElementById("demo2").innerHTML="Hello React";
+             i=1;
+        }else{
+             document.getElementById("demo2").innerHTML="Hello js";
+             i=0;
+        }
+     })
+</script>
+</html>

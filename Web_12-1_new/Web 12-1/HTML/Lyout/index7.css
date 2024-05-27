@@ -1,0 +1,58 @@
+.container{
+    width: 600px;
+    height: 400px;
+    background-color: blue;
+    margin: auto;
+    padding: 20px;
+
+}
+.contan-top{
+    width: 90%;
+    height: 40%;
+    background-color: red;
+    display: flex;
+    padding: 10px;
+    margin: auto;
+}
+.contan-box{
+    width: 32%;
+    height: 100%;
+    background-color: black;
+}
+.contan-box:nth-child(2){
+    margin-left: 2%;
+}
+.contan-box:nth-child(3){
+    margin-left: 2%;
+}
+.contan-button{
+    width: 80%;
+    height: 47%;
+    background-color: aqua;
+    margin-top: 2%;
+    display: flex;
+    margin-left: 20px;
+    padding: 10px;
+}
+.contan-button-box{
+    width: 32%;
+    height: 100%;
+    background-color: yellow;
+}
+.contan-button-box:nth-child(2){
+    margin-left: 2%;
+}
+.contan-button-box:nth-child(3){
+    margin-left: 2%;
+}
+.box-top{
+    width: 100%;
+    height: 48%;
+    background-color: pink;
+}
+.box-button{
+    width: 100%;
+    height: 49%;
+    background-color:tomato;
+    margin-top: 3%;
+}

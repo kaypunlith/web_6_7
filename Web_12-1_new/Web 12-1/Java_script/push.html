@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt1"><br><br>
+    <input type="text" id="txt2"><br><br>
+    <input type="text" id="txt3"><br><br>
+    <button id="btn-add">Add</button>
+    <table border="1"   >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+       <tbody id="tbl">
+        <tr>
+            <td>1001</td>
+            <td>coca</td>
+            <td>40</td>
+        </tr>
+       </tbody>
+    </table>
+</body>
+<script>
+    const Item=[
+        {id:"1002",name:"Sting",price:"20"},
+        {id:"1003",name:"iron",price:"30"},
+    ];
+    var data=""
+  for (const i of Item){
+    data+=`
+        <tr>
+            <td>${id}</td>
+            <td>${name}</td>
+            <td>${price}</td>
+        </tr>
+    `;
+    document.getElementById("tbl").innerHTML=data;
+  }
+
+    document.getElementById("btn-add").addEventListener("click",function(){
+        
+    })
+</script>
+</html>

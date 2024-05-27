@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="txt">For loop</h1>
+    <button type="button" id="btn">Click Me</button>
+</body>
+<script>
+    var btn=document.getElementById("btn");
+    var i,sum="";
+    btn.onclick=function(){
+        for(i=0;i<10;i++){
+          sum=sum+i+"<br>";
+        }
+        document.getElementById("txt").innerHTML=sum;
+
+    }
+</script>
+</html>

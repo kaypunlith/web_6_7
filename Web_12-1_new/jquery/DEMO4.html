@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+    .demo{
+        width: 500px;
+        height: 500px;
+    
+        background-color: red;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .box{
+        width:100px;
+        height: 100px;
+        background-color: black;
+        margin-left: 5px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+    }
+    button{
+        padding: 10px;
+    }
+  
+</style>
+<body>
+    <button type="button" id="btn">Add</button>
+    <div class="demo">
+        <!-- <div class="box"></div> -->
+        
+    </div>
+   
+</body>
+<script>
+    $(document).ready(function(){
+        var i=0;
+        $("#btn").click(function(){
+          $(".demo").append(`<div class="box">${i}</div>`);
+          i++;
+        })
+    })
+</script>
+</html>

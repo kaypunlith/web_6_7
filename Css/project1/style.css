@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contan{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    background-image: url('/Css/image/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.navbar{
+    width: 100%;
+    /* height: 50px; */
+    background-color:white;
+    box-shadow: 1px 1px 5px 0px black;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    list-style-type: none;
+}
+.navbar ul li a{
+    display: block;
+    padding: 13px;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+.navbar ul .box-search{
+    display: flex;
+    background-color: blue;
+    width:250px;
+    height:70%;
+    margin-top:7px;
+    border-radius: 5px;
+    overflow: hidden    ;
+}
+.navbar ul .box-search .search{
+    width:80%;
+    height: 100%;
+    background-color: rgb(196, 196, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul .box-search .search input{
+    background:none;
+    border: none;
+    outline: none;
+    color: white;
+
+}
+.navbar ul .box-search .btn-seacrh{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+} 
+.navbar ul .box-search .btn-seacrh button{
+    background: none;
+    border: none;
+    color: white;
+}
+.box-txt{
+    position: absolute;
+    top:20%;
+    left:100px;
+    /* background-color: red; */
+    width: 500px;
+    height: 300px;
+}
+.box-txt h1{
+    font-size: 50px;
+    color: rgb(39, 38, 38);
+}
+.box-txt h1 span{
+    color:#E67E22 ;
+}
+.box-txt p{
+    font-size: 25px;
+
+}
+.box-txt button{
+    padding: 15px 20px;
+    margin-top: 10px;
+    background: none;
+    font-size: 22px;
+    background-color:#E67E22;
+    color: white;
+}
+.box-txt button:hover{
+    background-color: #e78d3f;
+}

@@ -1,0 +1,240 @@
+  body{
+    height: 200vh;
+  }
+  *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        /* background-color: black; */
+    }
+    .navbar ul li{
+        display: inline-block;
+        margin-left: 30px;
+        color: white;
+       
+    }
+    .navbar ul li a{
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+    }
+    .form-control{
+        width: 400px;
+        position: relative;
+        top: 6px;
+    }
+    .btn{
+        position: relative;
+        top:6px;
+    }
+    .navbar ul li img{
+        width: 120px;
+        margin-top: 10px;
+        border: 2px solid white;
+        padding: 5px;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .slid{
+        height: 500px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .mySwiper{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+    }
+    .mySwiper img{
+        width: 100%;
+        height: 100%;
+    }
+    .slid-top{
+        height: 200px;
+        background-color: blue;
+    }
+    .slid-top .Swiper{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+    .slid-top .Swiper img{
+        width: 100%;
+        height: 100%;
+    }
+    .top-box{
+        
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 100%;
+        height: 230px;
+        background-color: rgb(233, 221, 221);
+    }
+    .box{
+        transition: 0.3s;
+        /* display: block; */
+        height: 230px;
+        /* background-color: yellow; */
+    }
+    .box:hover{
+        position: relative;
+        top: -10px;
+         background-color: white; 
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+    }
+    .box-img{
+        width: 100%;
+        height: 80%;
+        background-color: blue;
+        border-radius: 50%;
+        overflow: hidden;
+         transition: 0.3s linear;
+    }
+    .box-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .box-text{
+        width: 100%;
+        height: 20%;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .footer{
+        height: 300px;
+    }
+    .footer img{
+        width: 200px;
+        border: 2px solid white;
+        margin-top: 30px;
+    }
+    .footer h5,p{
+        position: relative;
+        top: 30px;
+        color: white;
+    }
+    .form_input{
+        margin-top: 40px;
+        width: 270px;
+        border-radius: 6px;
+        height: 40px;
+        background-color:white;
+        display: flex;
+    }
+    .form_input input{
+        border: none;
+        background: none;
+        outline: none;
+    }
+    .form_input i{
+        color: rgb(82, 78, 78);
+        position: relative;
+        top: 10px;
+        left: 8px;
+        font-size: 22px;
+    }
+      .form_input .btn{
+        top: -3px;
+        position: relative;
+        margin-left: 25px;  
+        height: 40px; 
+    }
+    .icon{
+        position: relative;
+        top: 20px;
+        width: 40px;
+        height: 40px;
+    /* background-color: red;  */
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        }
+
+    .icon i{
+        color: white;
+        font-size: 24px
+    }
+     .icon:hover{
+        background-color: red;
+        color: white;
+     }
+    
+@media (min-width: 576px) { 
+  .form-control{
+    display: none;
+  }
+    .navbar ul li a{
+         display: none;
+    }
+      .btn{
+       display: none;
+    }
+      .box{
+        display: none;
+    }
+     .slid{
+        height: 300px;
+    }
+ }
+
+ @media (min-width: 768px) { 
+        .form-control{
+         width: 250px;
+         display: block;
+     }
+      .navbar ul li a{
+         display: none;
+    }
+       .btn{
+       display: block;
+    }
+    #box-last {
+        display: none;
+    } 
+    .box{
+        display: none;
+    }
+    .slid{
+        height: 350px;
+    }
+    
+ }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .form-control{
+    width: 300px;
+  }
+    .navbar ul li a{
+         display: block;
+    }
+    #box-last {
+        display: none;
+    } 
+      .box{
+        display: block;
+    }
+    .slid{
+        height: 500px;
+    }
+}
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .form-control{
+    width: 400px;
+  }
+   #box-last {
+        display: block;
+    } 
+      .box{
+        display: block;
+    }
+ }

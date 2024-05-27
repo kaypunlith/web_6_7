@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Odor+Mean+Chey&family=Oswald:wght@200&family=PT+Sans&family=PT+Serif&family=Siemreap&display=swap" rel="stylesheet">
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+        }
+        .Menu{
+            width: 100%;
+            background-color: red;
+            float: left;
+        }
+        .Menu ul{
+            list-style-type: none;
+        }
+        .Menu ul li{
+            float: left;
+        }
+        .Menu ul li a{
+            padding: 10px;
+            display: block;
+            font-size: 22px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Angkor', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="Menu">
+        <ul id="getmenu">
+            
+            <!-- <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Home</a>
+            </li> -->
+
+        </ul>
+    </div>
+</body>
+<script>
+    GetItem();
+    function GetItem(){
+        var txt=""
+    const Menus=[
+        {"name":`<i class="fa-solid fa-house"></i>`},
+        {"name":"កម្សាន្ត","color":"green"},
+        {"name":"បច្ចេកវិទ្យា","color":"blue"},
+        {"name":"កីឡា","color":"black"},
+        {"name":"សង្គម","color":"pink"},
+    ]
+     for(key of Menus){
+       txt+=`
+            <li>
+                <a href="" style="color:${key.color}">${key.name}</a>
+            </li> 
+       `
+     }
+     document.getElementById("getmenu").innerHTML=txt;
+    }
+</script>
+</html>

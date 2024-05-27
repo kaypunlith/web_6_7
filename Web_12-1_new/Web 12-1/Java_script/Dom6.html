@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    input Emails: <input type="text" id="user"><br><br>
+    input password: <input type="text" id="pass"><br><br>
+                    <input type="button" id="btn" value="Click Me">
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+        var user=document.getElementById("user");
+        var pass=document.getElementById("pass");
+        if(user.value=="Addmingmail.com"){
+            if(pass.value==123){
+               swal("Login success!", "You clicked the button!", "success")
+            }else{
+                swal("Error pass!", "You clicked the button!", "success")  
+            }
+        }else{
+              swal("Error email!", "You clicked the button!", "success")
+        }
+    })
+</script>
+</html>

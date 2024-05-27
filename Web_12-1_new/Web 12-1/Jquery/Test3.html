@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./file_jq.js"></script>
+    <style>
+        .demo{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button id="btn">Css</button>
+    <div class="demo">
+        Hello Demo
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(){     
+            var txt=$("#txt").val();
+            
+
+            $(".demo").css({"color":"black","backgroundColor":"pink"});
+            $(".demo").html(`<h1>${txt}</h1>`)
+        })
+    })
+</script>
+</html>

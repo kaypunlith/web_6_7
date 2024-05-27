@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./file_jq.js"></script>
+</head>
+<body>
+    <p class="txt">Hello Java script</p>
+    <button id="btn">Chang</button>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+             $(".txt").html("<h1>Hello Jquery</h1>");
+             $(".txt").text ("<h1>Hello Jquery</h1>");
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- script sweper slid -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 Menu">
+                <ul>
+                    <li>
+                        <a href=""><img src="data:image/png;base64,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" alt=""></a>
+                    </li>
+                </ul>
+                <ul class="ul2">
+                    <li>
+                        <input type="text" placeholder="Search...">
+                       
+                    </li>
+                    <li>
+                        <button>Search</button>
+                    </li>
+                </ul>
+                <ul class="ul3">
+                    <li>
+    
+                        <a href=""><i class="fa-solid fa-user"></i>Acount</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-question"></i>Help</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i>MyCard</a>
+                    </li>
+                    
+                </ul>
+                <ul class="ul4">
+                    <li class="bar">
+                        <a href=""><i class="fa-solid fa-bars"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2 text-dark">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 slid">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://zz.jumia.is/cms/01_HP_Sliders/2023/2408_DT_HP-Slider-2-712x384-.gif" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://cdn.shopify.com/app-store/listing_images/2414b1c3936f57e872b671113c1297a1/desktop_screenshot/COOZ5ZLqifQCEAE=.png?height=900&width=1600" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://codyhouse.co/assets/img/gems/hero/product-slider-featured.svg" class="d-block w-100" alt="">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+            </div>
+    </div>
+</body>
+
+</html>

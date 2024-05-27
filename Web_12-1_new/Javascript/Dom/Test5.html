@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .demo{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+      button{
+        margin-top: 10px;
+      }
+    </style>
+</head>
+<body>
+    <div class="demo"></div>
+    <button type="button" id="btn">Clikc Me</button>
+    <button type="button" id="hide">Hide</button>
+    <button type="button" id="show">Show</button>
+    <button type="button" id="hidshow">Hide</button>
+</body>
+<script>
+    var btn=document.getElementById("btn");
+    var demo=document.querySelector(".demo");
+    var h_s=document.getElementById("hidshow");
+    var i=0;
+    btn.onclick=function(){
+        demo.style.width="300px";
+        demo.style.height="300px";
+        demo.style.backgroundColor="red";
+        demo.style.border="1px solid black";
+    }
+    document.getElementById("hide").addEventListener("click",function(){
+        demo.style.display="none";
+    })
+    document.getElementById("show").addEventListener("click",function(){
+        demo.style.display="block";
+    })
+    document.getElementById("hidshow").addEventListener("click",function(){
+        if(i==0){
+            demo.style.display="none";
+            h_s.innerHTML="show";
+            i=1; 
+        }else{
+            demo.style.display="block";
+            h_s.innerHTML="Hide";
+            i=0;
+        }
+    })
+</script>
+</html>

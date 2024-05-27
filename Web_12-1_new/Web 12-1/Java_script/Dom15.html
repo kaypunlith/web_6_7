@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .Menu{
+            width: 100%;
+            background-color: red;
+            float: left;
+            position: relative;
+        }
+        .Menu ul{
+            list-style-type: none;
+        }
+        .Menu ul li {
+            float: left;
+        }
+        .Menu ul li a{
+            display: block;
+            padding: 10px;color:white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            
+        }
+        .Menu ul li .sub{
+            position: absolute;
+            top:100%;
+            width: 100px;
+            background-color: black;
+            display: none;
+        }
+        .Menu ul li:hover .sub{
+            display: block;
+        }
+        .Menu ul li .sub li:hover{
+            background-color: blue;
+        }
+        .Menu ul li .sub li {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Menu">
+        <ul id="demo">
+            <!-- <li>
+                <a href="">Home</a>
+                <ul class="sub">
+                     <li>
+                        <a href="">Hoom1</a>
+                     </li>
+                     <li>
+                        <a href="">Hoom1</a>
+                     </li>
+                     <li>
+                        <a href="">Hoom1</a>
+                     </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Home</a>
+                  <ul class="sub">
+                     <li>
+                        <a href="">Hoom1</a>
+                     </li>
+                     <li>
+                        <a href="">Hoom1</a>
+                     </li>
+                     <li>
+                        <a href="">Hoom1</a>
+                     </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Home</a>
+                  <ul class="sub">
+                     <li>
+                        <a href="">Hoom1</a>
+                     </li>
+                     <li>
+                        <a href="">Hoom1</a>
+                     </li>
+                     <li>
+                        <a href="">Hoom1</a>
+                     </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Home</a>
+            </li> -->
+        </ul>
+    </div>
+</body>
+<script>
+    Menulist=[
+        {
+            "title":"Home",
+            "sub":["Home1","Home2","Hom3"]
+        },
+         {
+            "title":"About",
+            "sub":["About1","About2","About3"]
+        },
+         {
+            "title":"Contect",
+            "sub":["Contect1","Contect2","Contect3"]
+        },
+        
+    ]
+    GetMenu();
+    function GetMenu(){
+        var txt=""
+      Menulist.forEach((element) => {
+        var txt1=""
+        var sub=element.sub;
+        sub.forEach((e)=>{
+            txt1+=`
+             <li>
+                 <a href="">${e}</a>
+            </li>
+            `
+            
+        })
+        txt+=`
+          <li>
+             <a href="">${element.title}</a>
+                 <ul class="sub">
+                    ${txt1}}
+                </ul>
+            <li>
+        `
+      });
+      document.getElementById("demo").innerHTML=txt;
+    }
+</script>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5 bg-dark text-light p-4">
+                <form action="">
+                    <label for="">Ente ID</label>
+                    <input type="text" id="id" class="form-control" placeholder="Enter id">
+                    <label for="">Ente name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter name">
+                    <label for="">Ente Email</label>
+                    <input type="text" id="email" class="form-control" placeholder="Enter email">
+                    <label for="">Ente Address</label>
+                    <input type="text" id="add" class="form-control" placeholder="Enter Address">
+                    <button type="button" id="btn" class="btn btn-success mt-2">Add </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-xl-8 col-lg-8">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl">
+                        <!-- <tr>
+                            <td>1001</td>
+                            <td>Sok Dara</td>
+                            <td>Dara@gmail.com</td>\
+                            <td>PP</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var ID=document.getElementById("id");
+    var Name=document.getElementById("name");
+    var Email=document.getElementById("email");
+    var Add=document.getElementById("add");
+    var table=document.getElementById("tbl");
+    document.getElementById("btn").addEventListener("click",function(){
+      table.innerHTML+=`
+         <tr>
+                 <td>${ID.value}</td>
+                <td>${Name.value}
+                 <td>${Email.value}</td>
+                 <td>${Add.value}</td>
+                 <td>
+                     <button class="btn btn-primary"><i class="fa-solid fa-pen-to-square me-1"></i>Update</button>
+                     <button class="btn btn-danger"><i class="fa-solid fa-trash me-1"></i>Delete</button>
+                  </td>
+            </tr>
+      `
+      ID.value=("");
+      Name.value=("");
+      Email.value=("");
+      Add.value=("");
+      ID.focus();
+        
+    })
+</script>
+</html>

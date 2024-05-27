@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .popup{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.415);
+        display: none;
+    }
+    .box-form{
+        position: relative;
+        bottom: 200px;
+        width: 400px;
+        height: 550px;
+        background-color: rgb(255, 255, 255);
+        margin: auto;
+        display: none;
+    }
+</style>
+<body>
+    <div class="container bg-dark p-4 text-light">
+        <h1>Product list</h1>
+        <button class="btn btn-primary float-end" id="btnadd">Add Data</button>
+        <table class="table table-light align-middle">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>price</th>
+                    <th>Madin</th>
+                    <th>Profile</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="tbl">
+                <!-- <tr>
+                    <td>1001</td>
+                    <td>Coca</td>
+                    <td>10$</td>
+                    <td>Thailand</td>
+                    <td>
+                        <img src="https://images.pexels.com/photos/3819969/pexels-photo-3819969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="80" height="80" style="object-fit: cover;">
+                    </td>
+                    <td>
+                        Lorem ipsum dolor sit amet.
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <div class="popup"></div>
+        <div class="box-form p-4">
+            <label for="" class="form-label">Entet code</label>
+            <input type="text" class="form-control" placeholder="Enter code" id="code">
+            <label for="" class="form-label">Entet name</label>
+            <input type="text" class="form-control" placeholder="Enter name" id="name">
+            <label for="" class="form-label">Entet price</label>
+            <input type="text" class="form-control" placeholder="Enter price" id="price">
+            <label for="" class="form-label">Input Mad in</label>
+            <input type="text" class="form-control" id="mad">
+            <label for="" class="form-label">Choose image</label>
+            <input type="file" class="form-label form-control" id="img">
+            <label for="" class="form-label">Description</label>
+            <textarea name="" id="" cols="3" rows="3" class="form-control" id="des"></textarea>
+            <button class="btn btn-success mt-2 float-end me-2" id="btn-sub">Submit</button>
+            <button class="btn btn-danger mt-2 float-end me-2" id="btn_cen" >Cencel</button>
+        </div>
+</body>
+ <script>
+    var popup=document.querySelector(".popup");
+    var box_form=document.querySelector(".box-form");
+    var btn_cen=document.getElementById("btn_cen");
+    var code=document.getElementById("code");
+     var Name=document.getElementById("name");
+      var price=document.getElementById("price");
+       var mad=document.getElementById("mad");
+        var thamnail=document.getElementById("img");
+         var des=document.getElementById("des");
+         var table=document.getElementById("tbl");
+        //  console.log(table);
+      document.getElementById("btnadd").addEventListener("click",function(){
+         popup.style.display="block";
+         box_form.style.display="block";
+      })
+      document.getElementById("btn_cen").addEventListener("click",function(){
+           popup.style.display="none";
+         box_form.style.display="none";
+      })
+      
+      document.getElementById("btn-sub").addEventListener("click",function(){
+        // alert(des.value);
+          popup.style.display="none";
+          box_form.style.display="none"; 
+         var imgae=thamnail.files[0];
+        console.log(imgae);
+        // console.log(imgae);
+          table.innerHTML+=`
+                <tr>
+                    <td>${code.value}</td>
+                    <td>${Name.value}{</td>
+                    <td>${price.value}</td>
+                    <td>${mad.value}</td>
+                    <td>
+                         <img src=${URL.createObjectURL(imgae)} alt="" width="80" height="80" style="object-fit: cover;">
+                    </td>
+                    <td>
+                        ${des.value}
+                    </td>
+                </tr>
+          `
+      })
+ </script>
+</html>

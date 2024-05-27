@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud js</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 bg-dark p-4 text-light">
+                <h1 class="text-center">Crud Js</h1>
+                <label for="" class="form-label">Enter ID</label>
+                <input type="text" id="txt1" class="form-control" >
+                 <label for="" class="form-label">Enter Name</label>
+                <input type="text" id="txt2" class="form-control" placeholder="Enter name...">
+                 <label for="" class="form-label">Enter Price</label>
+                <input type="text" id="txt3"class="form-control" placeholder="Enter price...">
+                <input type="button" class="btn btn-success mt-2" id="btn" value="Add">
+                 <input type="button" class="btn btn-primary mt-2" id="btn1" value="Update" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbl">
+            <!-- <tr>
+                <td>1001</td>
+                <td>css</td>
+                <td>10</td>
+            </tr> -->
+        </tbody>
+        <tfoot>
+            <td colspan="3" align="right">Total</td>
+            <td id="total_price">0</td>
+        </tfoot>
+    </table>
+    </div>
+  
+</body>
+<script>
+    const Item=[
+    ];
+    var txt1=document.getElementById("txt1");
+     var txt2=document.getElementById("txt2");
+      var txt3=document.getElementById("txt3");
+      var total=document.getElementById("total_price");
+      var index;
+      var  icon=`<button class="btn btn-warning btn_up">Update</button>
+                <button class="btn btn-danger btn_del">Delete</button>
+      `
+    
+      Autoid();
+    getitem();
+     function getitem(){
+        var txt="";
+        Item.forEach((e)=>{
+            txt=txt+`
+                <tr>
+                <td>${e.id}</td>
+                <td>${e.name}</td>
+                <td>${e.price}</td>
+                <td>${icon}</td>
+            </tr>
+            `
+        })
+        document.getElementById("tbl").innerHTML=txt;
+     }
+     document.getElementById("btn").addEventListener("click",function(){
+        if(txt2.value==""){
+             alert("Please Entert name");
+             return;
+        }else if(txt3.value=="" || txt3.value==0){
+               alert("Please Enter price");
+               return;
+        }
+        Item.push({id:txt1.value,name:txt2.value,price:txt3.value});
+            getitem();
+             Autoid();
+         txt2.focus(); 
+         txt2.value=("");
+         txt3.value=("");  
+        //   total.innerHTML=700;
+         Getprice();
+         Update();
+        Delete();
+     })
+     function Autoid(){
+        txt1.value=Item.length+1;
+     }
+     function Getprice(){
+        var sum_total=0;
+        for(i of Item){
+            // console.log(i.price);
+             sum_total+=Number(i.price);
+        }
+        total.innerHTML=sum_total;
+     }
+     function Update(){
+       var btn_up=document.querySelectorAll(".btn_up");
+       btn_up.forEach((e,i)=>{
+         e.addEventListener("click",function(){
+           txt2.value=Item[i].name;
+           txt3.value=Item[i].price;
+           index=i;
+           document.getElementById("btn").style.display="none";
+           document.getElementById("btn1").style.display="block";
+         })
+       })
+     }
+       document.getElementById("btn1").addEventListener("click",function(){
+          Item[index].name=txt2.value;
+          Item[index].price=txt3.value;
+          getitem();
+          Getprice();
+              document.getElementById("btn").style.display="block";
+           document.getElementById("btn1").style.display="none";
+             txt2.value=("");
+         txt3.value=("");  
+       })
+    
+       function Delete(){
+        var btndel=document.querySelectorAll(".btn_del");
+        btndel.forEach((e,i)=>{
+            e.addEventListener("click",function(){
+                Item.splice(i,1);
+                getitem();
+                
+            })
+        })
+         
+       }
+    
+
+
+</script>
+</html>

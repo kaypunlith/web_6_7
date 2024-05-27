@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .menu-bar{
+            width: 100%;
+            /* height: 50px; */
+            background-color: black;
+        }
+        .menu{
+            width:80%;
+            height: 100%;
+            /* background-color: rgb(224, 13, 13); */
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu ul li{
+            list-style-type: none;
+            
+        }
+        .menu ul li a {
+            display: block;
+            padding: 15px;
+            font-size: 22px;
+            color: azure;
+            position: relative;
+            text-decoration: none;
+        }
+        .conut{
+            position: absolute;
+            top: -2px;
+            border-radius: 50%;
+            text-align: center;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background-color: royalblue;
+        }
+        .container{
+            margin-top: 10px;
+            width: 100%;
+            background-color: black;
+            position: relative;
+        }
+        .contan{
+            width: 80%;
+            margin: auto;
+      
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+           
+        }
+        .item-box{
+            width: 24%;
+            height:400px;
+            background-color: blue;
+            
+        margin-bottom: 8px;
+            
+        }
+        .item-box .box-img{
+            width: 100%;
+            height: 50%;
+            background-color: teal;
+        }
+        .item-box .box-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .item-box .box-txt{
+            width: 100%;
+            height: 50%;
+            background-color:white;
+        }
+        .item-box .box-txt h1{
+            padding: 8px;
+            font-size: 23px;
+        }
+        .item-box .box-txt p{
+            font-size: 20px;
+            padding: 8px;
+        }
+        .item-box .box-txt button{
+            width: 100px;
+            height: 40px;
+            margin-left: 20px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 22px;
+            background-color: blue;
+        }
+        .left_menu{
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: none;
+            width:500px;
+            transition: 0.8s;
+            height: 500px;
+            background-color: rgba(10, 10, 29, 0.703);
+        }
+        .left_menu table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table tr th{
+            color: white;
+            font-size: 22px;
+        }
+        table tr td{
+            text-align: center;
+            color: white;
+            font-size: 22px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="">Food</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#"><span id="btn-count">shop</span> <div class="conut">0</div></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="contan">
+            <!-- <div class="item-box">
+                <div class="box-img">
+                    <img src="https://i.pinimg.com/564x/b6/2f/04/b62f04b09c5ef011a23d64e66a9ca3f9.jpg" alt="">
+                </div>
+                <div class="box-txt">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, numquam.</p>
+                    <button type="button" id="btn">Add</button>
+                </div>
+            </div> -->
+            
+        </div>
+        <div class="left_menu">
+            <table border="1" class="show_data">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Img</th>
+                    <th >
+                        <span id="btn-closth">X</span>
+                    </th>
+                </tr>
+                <!-- <tr>
+                    <td>1</td>
+                    <td>coca</td>
+                    <td>
+                        <img src="/photo/coffee2.jpeg" style=" width: 80px; height: 80px; object-fit: cover;" alt="">
+                    </td>
+                </tr> -->
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    const products=[
+  {
+    "id":1,
+    "title":"Food shoop",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"https://i.pinimg.com/564x/b6/2f/04/b62f04b09c5ef011a23d64e66a9ca3f9.jpg",
+  },
+  {
+    "id":2,
+    "title":"Sanwitch",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"https://i.pinimg.com/564x/2b/7e/d1/2b7ed1fee6aab4783d57cc9cb53109df.jpg",
+  },
+  {
+    "id":3,
+    "title":"Cooki",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"https://i.pinimg.com/564x/e1/05/83/e105833542647e3f1147f38aa7dfafa8.jpg",
+  },
+  {
+    "id":4,
+    "title":"Food pupuler",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"https://i.pinimg.com/564x/a6/cb/31/a6cb312c18f1c2353cd5c1d61996e180.jpg",
+  },
+  {
+    "id":5,
+    "title":"Lorem ipsum dolor sit amet.",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"https://i.pinimg.com/564x/15/65/e6/1565e68a5d5990eb1bf4e5c08202485a.jpg"
+  },
+]
+Mapdata();
+function Mapdata(){
+    var txt=""
+    for (const pro of products) {
+        txt+=`
+        <div class="item-box">
+                <div class="box-img">
+                    <img src=${pro.img} alt="">
+                </div>
+                <div class="box-txt">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, numquam.</p>
+                    <button type="button" id="btn">Add</button>
+                </div>
+            </div>
+        
+        `
+        document.querySelector(".contan").innerHTML=txt;
+    }
+}
+var i=0;
+document.getElementById("btn-count").addEventListener("click",function(){
+  if(i==0){
+    document.querySelector(".left_menu").style.display="block";
+    i=1;
+  }else{
+    document.querySelector(".left_menu").style.display="none";
+    i=0;
+  }
+})
+//clos btn
+// q    
+var count=document.querySelector(".conut");
+var btn_add=document.querySelectorAll("#btn");
+btn_add.forEach((el,i)=>{
+    var num=1;
+    el.addEventListener("click",function(){
+        count.innerHTML=num;
+        num++;
+        document.querySelector(".show_data").innerHTML+=`
+        <tr>
+            <td>${products[i].id}</td>
+            <td>${products[i].title}</td>
+            <td>
+                <img src="${products[i].img}" style=" width: 80px; height: 80px; object-fit: cover;" alt="">
+            </td>
+        </tr>
+        
+        `
+        
+    })
+  
+})
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="txt"></h1>
+    <button type="button" id="btn">add</button>
+    <button type="button" id="btn1">sub</button>
+</body>
+<script>
+    var i=0;
+    document.getElementById("btn").onclick=function(){
+        i++;
+    document.querySelector("#txt").innerHTML=i;
+    }
+    document.getElementById("btn1").onclick=function(){
+        i--;
+    document.querySelector("#txt").innerHTML=i;
+    }
+</script>
+</html>

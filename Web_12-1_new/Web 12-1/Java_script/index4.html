@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr=[10,20,30,40,50,60];
+  // foreach
+    arr.forEach(key => {
+          document.write("arr="+key+"<br>");
+    });
+// for in
+    for (key in arr) {
+       document.write("arr="+arr[key]+"<br>")
+    }
+// forof
+    for (key of arr) {
+          document.write("arr="+key+"<br>");
+    }
+// arr map
+    arr.map((key)=>{
+       document.write("arr="+key+"<br>");
+    })
+</script>
+</html>

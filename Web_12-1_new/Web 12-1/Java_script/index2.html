@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr=[10,20,30,40,50,60];
+    var i;
+
+    // for (const i of arr) {
+    //   console.log(i);
+    // }
+
+    // for (const i in arr) {
+    //   console.log("arr="+arr[i]);
+    // }
+
+    // arr.forEach(i=> {
+    //   console.log(i);
+    // });
+
+    // arr.map((i)=>{
+    //   console.log(i);
+    // })
+    // for(i=0;i<arr.length;i++){
+    //     document.write("Arr["+i+"]="+arr[i]+"</br>");
+    // }
+    // var pass;
+    var email;
+    pass=prompt("Enter password");
+    email=prompt("Enter email=");
+    if(pass==1234){
+       if(email=="addmin.com"){
+         swal("Login success!", "You clicked the button!", "success");
+      }else{
+         swal("Error Email!", "You clicked the button!", "success");
+      }
+    }else{
+     swal("Error passworld!", "You clicked the button!", "success");
+    }
+
+</script>
+</html>

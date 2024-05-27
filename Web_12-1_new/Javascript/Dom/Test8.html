@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Entet passwold</label><br>
+    <input type="text" id="pass"><br>
+    <label for="">Entert email</label><br>
+    <input type="text" id="email"><br><br>
+    <button type="button" id="btn">Click Me</button>
+</body>
+<script>
+    var pass=document.getElementById("pass");
+    var email=document.getElementById("email");
+    var btn=document.getElementById("btn");
+    btn.onclick=function(){
+        if(pass.value!="" && email.value!=""){
+            if(pass.value==123){
+                if(email.value=="admin"){
+                    alert("login success");
+                }else{
+                    alert("Email Error");
+                }
+            }else{
+                alert("Error passworld");
+            }
+        }else{
+            alert("Please Enetr again");
+        }
+        pass.value="";
+        email.value="";
+         pass.focus();
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">Condetion statment</h1>
+    <input type="text" id="txt">
+    <button type="button" id="btn">click Me</button>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+        //  var text='blue';
+        var text=document.getElementById("txt");
+        var txt1=document.getElementById("demo");
+        if(text.value=='red'){
+          txt1.innerHTML="This color red";
+          txt1.style.color="red";
+        }else if(text.value=="blue"){
+          txt1.innerHTML="This color blue";
+          txt1.style.color="blue";
+        }else if(text.value=="green"){
+          txt1.innerHTML="This color green";
+          txt1.style.color="green";
+        }
+        else{
+            alert("please Enter again");    
+        }
+    })
+</script>
+</html>

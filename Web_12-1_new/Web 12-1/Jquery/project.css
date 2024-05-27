@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 300vh;
+}
+.Menu {
+  /* background-color: red; */
+  float: left;
+}
+.Menu ul li {
+  gap: 10px;
+  list-style-type: none;
+  float: left;
+}
+.Menu ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+}
+.box-right {
+  width: 100%;
+  height: 300px;
+  background-color: black;
+}
+.box-right ul {
+  list-style-type: none;
+  padding: 0;
+}
+.box-right ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.box-right ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: #fff;
+}
+.box-right ul li:hover {
+  background-color: blue;
+  color: white;
+}
+.box-right ul li i {
+  color: white;
+}
+.box-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  background-color: blanchedalmond;
+  position: relative;
+}
+.slid{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.slid img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn-left{
+  position: absolute;
+  left:15px;
+  padding: 5px 20px;
+   border-radius: 5px;
+  background-color:white;
+}
+.btn-right{
+   padding: 5px 20px;
+   border-radius: 5px;
+  background-color:white;
+  position: absolute;
+  right: 10px;
+
+}
+.box-item{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100%;
+  height: 400px;
+  background-color: #fff;
+}
+.box-item img{
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+.box-item h3{
+  padding: 5px;
+}
+.box-item p{
+  padding: 5px;
+}
+.box-item button{
+  position: relative;
+  left: 30%;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  bottom: 20px;
+  color: #fff;
+  background-color: #10b981;;
+}
+.box-item button:hover{
+  cursor: pointer;
+}

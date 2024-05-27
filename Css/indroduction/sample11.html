@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .contan{
+        width:70%;
+        height:500px;
+        /* background-color: #ff0000; */
+       padding: 10px;
+       display: flex;
+       /* justify-content: space-between; */
+        margin: auto;
+      }
+      .box{
+        width: 33%;
+        height: 100%;
+        box-shadow: 1px 1px 5px 0px black;
+        /* background-color: black; */
+      }
+      .box .box-img{
+        width:100%;
+        height: 40%;
+        /* background-color: blue; */
+      }
+      .box .box-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .box-text{
+        width: 100%;
+        height: 60%;
+        background-color:white;    
+      }
+      .box-text h1{
+        text-align: center;
+      }
+      .box-text p{
+        margin: 6px;
+        font-size: 20px;
+      }
+      .box-text button{
+        margin-left:90px;
+        padding: 15px 50px;
+        background: none;
+        border:none ;
+        background-color: aquamarine  ;
+        font-size: 20px;
+        border-radius: 6px;
+      }
+      .box-text button:hover{
+        background-color: blue;
+        color: white;
+        transition: 0.8s;
+      }
+      .box:nth-child(2){
+        margin-left: 10px;
+      }
+      .box:nth-child(3){
+        margin-left: 10px;
+      }
+    </style>
+</head>
+<body>
+    <div class="contan">
+       <div class="box">
+        <div class="box-img">
+            <img src="/photo/komport2.jpg" alt="">
+        </div>
+        <div class="box-text">
+            <h1>Kompot</h1>
+            <p>Lorem  recusandae? Numquam eveniet aspernatur libero, excepturi in facilis doloremque necessitatibus corrupti? Id nihil unde nobis magnam quidem ratione. Reiciendis cumque praesentium dolor asperiores quaerat dolores, consectetur porro error. Quibusdam deleniti quasi itaque.
+            </p>
+            <button>Explore</button>
+        </div>
+       </div>
+       <div class="box">
+        <div class="box-img">
+            <img src="/photo/seimReap2.jpg" alt="">
+        </div>
+        <div class="box-text">
+            <h1>Seim Reap</h1>
+            <p>Lorem  recusandae? Numquam eveniet aspernatur libero, excepturi in facilis doloremque necessitatibus corrupti? Id nihil unde nobis magnam quidem ratione. Reiciendis cumque praesentium dolor asperiores quaerat dolores, consectetur porro error. Quibusdam deleniti quasi itaque.
+            </p>
+            <button>Explore</button>
+        </div>
+       </div>
+       <div class="box">
+        <div class="box-img">
+            <img src="/photo/pp1.jpg" alt="">
+        </div>
+        <div class="box-text">
+            <h1>phom penh</h1>
+            <p>Lorem  recusandae? Numquam eveniet aspernatur libero, excepturi in facilis doloremque necessitatibus corrupti? Id nihil unde nobis magnam quidem ratione. Reiciendis cumque praesentium dolor asperiores quaerat dolores, consectetur porro error. Quibusdam deleniti quasi itaque.
+            </p>
+            <button>Explore</button>
+        </div>
+       </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btn" value="Button">
+    <div class="txt">Hello Java</div>
+</body>
+<script>
+    // function action(){
+    //     alert(123);
+    // }
+
+    // document.getElementById("btn").onclick=function(){
+    //     alert(1234);
+    // }
+
+    // var btn=document.getElementById("btn");
+    // btn.onclick=function(){
+    //     alert("Hello");
+    // }
+     var i=0;
+    document.querySelector("#btn").addEventListener("click",function(){
+       if(i==0){
+        document.querySelector(".txt").innerHTML="Hello java script";
+        i=1;
+       }else{
+        document.querySelector(".txt").innerHTML="Hello java";
+        i=0;
+       }
+        // alert(12345);
+    })
+    
+
+</script>
+</html>

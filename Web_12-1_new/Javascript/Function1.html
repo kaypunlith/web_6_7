@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    //non reteun non paramet
+    function Sayhello(){
+        document.write("Hello my name is dara<br>");
+        var a=10;
+        var b=20;
+        document.write("A+B=",a+b,"<br>");
+    }
+    Sayhello();
+    //non return has parament
+    function sum(a,b){
+        document.write("A+B=",a+b,"<br>");
+    }
+    sum(40,20);
+    function Login(pass,cpass){
+        if(pass==cpass){
+            alert("Login success");
+        }
+        else{
+            alert("login not success");
+        }
+    }
+    // Login(123,23)
+    function Login(pass,email){
+        if(pass==123){
+            if(email=="admin.com"){
+                swal("Good job!", "You clicked the button!", "success")
+            }else{
+                swal("Email Error!", "You clicked the button!", "success")
+            }
+        }else{
+            swal("Password Error", "You clicked the button!", "success");
+        }
+    }
+    // var pass=prompt("Enter password=");
+    // var email=prompt("Enter email=");
+    // Login(pass,email);
+    //has return non paramen
+    function sum(){
+      var a=80;
+      var b=30;
+      return a+b;
+    }
+    document.write("A+B=",sum(),"<br>");
+    //has return has paramet
+    function sum1(c,d){
+        return c-d;
+    }
+    document.write("C-D=",sum1(sum(),30));
+    //Arrow function
+    const Student=()=>{
+        //  var code=prompt("Enter code=");
+        //  var name=prompt("Enter name=");
+         var s1=prompt("Entet score1=");
+         var s2=prompt("Entet score2=");
+         var s3=prompt("Entet score3=");
+         var s4=prompt("Entet score4=");
+         var s5=prompt("Entet score5=");
+         var total=parseInt(s1)+parseInt(s2)+parseInt(s3)+parseInt(s4)+parseInt(s5);
+         alert(total);
+         var avg=total/5;
+         alert(avg);
+        if(avg>50 && avg<=60){
+            alert("Grand=E");
+        }else if(avg>60 && avg<=70){
+            alert(total);
+            alert(avg);
+            alert("Grand=D");
+        }else if(avg>70 && avg<=80){
+            alert(total);
+            alert(avg);
+            alert("Grand=C");
+        }
+        else if(avg>80 && avg<=90){
+            alert(total);
+            alert(avg);
+            alert("Grand=B");
+        }
+        else if(avg>90 && avg<=100){
+            alert(total);
+            alert(avg);
+            alert("Grand=A");
+        }
+
+    }
+    Student();
+    
+
+</script>
+</html>

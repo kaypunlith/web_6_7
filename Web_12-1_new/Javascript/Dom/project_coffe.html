@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .menu-bar{
+        width: 100%;
+        /* height: 50px; */
+        background-color: black;
+        }
+        .menu{
+            width: 80%;
+            height: 100%;
+            /* background-color: rgb(132, 26, 26); */
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .menu ul li{
+        list-style-type: none;
+        }
+        .menu ul li a{
+            display: block;
+            padding: 15px;
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+        }
+        .container{
+            width: 100%;
+            height: 200vh;
+            background-color: black;
+            margin-top: 10px;
+            padding: 10px;  
+
+        }
+        .contan{
+            width: 80%;
+            /* height: 100%; */
+            margin: auto;
+            /* background-color: blue;   */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap:wrap;
+        }
+        .item-box{
+            width: 24%;
+            height: 400px;
+            background-color: red;
+            margin-bottom: 10px;
+        }
+        .box-img{
+            width: 100%;
+            height: 50%;
+            background-color: brown;
+        }
+        .box-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .box-txt{
+            width: 100%;
+            height: 50%;
+            background-color: white;
+        }
+        .box-txt h1{
+            font-size: 25px;
+            padding: 8px;
+        }
+        .box-txt p{
+            padding: 8px;
+            font-size: 19px;
+        }
+        .box-txt button{
+            width: 100px;
+            height: 40px;
+            background-color: blue;
+            margin-left: 10px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+        }
+        .popup{
+            position: fixed;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.577);
+            display: none;
+        }
+        .loading{
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            width: 300px;
+            height: 300px;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-size:30%,30%;
+            background-position: center;
+
+            background-image: url('https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif');
+        }
+        .frm{
+            width: 400px;
+            height: 400px;
+            background-color: white;
+            position: absolute;
+            top: 10%;
+            left: 35%;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+        }
+        .frm label{
+            width: 100%;
+            font-size: 22px;
+            
+        }
+        .frm input{
+            width: 100%;
+            padding: 8px;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        .btn{
+            width: 100px;
+            height: 40px;
+            background-color: blue;
+            margin-top: 20px;
+            border: none;
+            border-radius: 7px;
+            color: white;
+            font-size:18px;
+
+        }
+        .clost{
+            position: absolute;
+        top: 0;
+        right: 0;
+        background-color: blue;
+        font-size: 20px;
+        padding: 8px;
+        color: white;
+        }
+        .left-menu{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(17, 17, 37, 0.822);
+            display: none;
+        }
+        .left-menu table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table tr th{
+            border: 1px solid white;
+            padding: 10px;
+            color: white;
+        }
+        table tr td{
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <div class="frm">
+            <label for="">Enter ID</label>
+            <input type="text" class="txt-id" id="txt-id">
+            <label for="">Enter name</label>
+            <input type="text" class="txt-name" id="txt-name">
+            <label for="">Enter price</label>
+            <input type="text" class="txt-price" id="txt-price">
+            <label for="">Enter qty</label>
+            <input type="text" class="txt-qty" id="txt-qty">
+            <button type="button" id="btnadd" class="btn">Post data</button>
+            <div class="clost">x</div>
+
+        </div>
+        <!-- <div class="loading"></div> -->
+    </div>
+    <div class="menu-bar">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="">Coffee</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#" id="shop">shop</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="contan">
+            
+              
+            
+           
+            
+            
+        </div>
+        <div class="left-menu">
+          
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>Qty</th>
+                    </tr>
+                </thead>
+                <tbody id="tbl_data">
+                    <tr>
+                        <td>1</td>
+                        <td>coca</td>
+                        <td>4</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    const product=[
+    {
+    "id":1,
+    "title":"Food shoop",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"/photo/coffee1.jpeg",
+  },
+  {
+    "id":2,
+    "title":"Sanwitch",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"/photo/coffee2.jpeg",
+  },
+  {
+    "id":3,
+    "title":"Cooki",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"/photo/coffee3.jpeg",
+  },
+  {
+    "id":4,
+    "title":"Food pupuler",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"/photo/coffee4.jpeg",
+  },
+  {
+    "id":5,
+    "title":"Amazon",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"/photo/coffee5.jpeg"
+  },
+  {
+    "id":6,
+    "title":"fast Drink",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"/photo/coffee6.jpeg"
+  },
+  {
+    "id":7,
+    "title":"Ice late",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"/photo/coffee6.jpeg"
+  },
+  {
+    "id":8,
+    "title":"capochino",
+    "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, libero!",
+    "img":"/photo/coffee6.jpeg"
+  },
+    ]
+  getproduct();
+    var txt=""
+
+    function getproduct(){
+        for (const pro of product) {
+       document.querySelector(".contan").innerHTML+=`  <div class="item-box">
+                    <div class="box-img">
+                        <img src=${pro.img} alt="">
+                    </div>
+                    <div class="box-txt">
+                        <h1>${pro.title}</h1>
+                        <p>${pro.des}</p>
+                        <button type="button"id="btn">Add product</button>
+                    </div>
+                </div>
+            
+            `
+           
+        }
+
+    }
+   
+    var btn=document.querySelectorAll("#btn");
+    var popup=document.querySelector(".popup");
+    var loading=document.querySelector(".loading");
+    document.querySelector(".clost").addEventListener("click",function(){
+        popup.style.display="none";
+    })
+    btn.forEach((el,i)=>{
+        el.addEventListener("click",function(){
+         popup.style.display="block";
+          
+        })
+    })
+
+    //left menu
+    document.querySelector(".left-menu").addEventListener("click",function(){
+        document.querySelector(".left-menu").style.display="none";
+    })
+    //shop
+    document.getElementById("shop").addEventListener("click",function(){
+        document.querySelector(".left-menu").style.display="block";
+    })
+    //btn post
+    var txt_name=document.querySelector(".txt-name");
+    var txt_price=document.querySelector(".txt-price");
+    var txt_qty=document.querySelector(".txt-qty");
+    document.getElementById("btnadd").addEventListener("click",function(){
+        
+        document.getElementById("tbl_data").innerHTML+=`
+                     <tr>
+                        <td>${txt_name.value}</td>
+                        <td>${txt_price.value}</td>
+                        <td>${txt_qty.value}</td>
+                     
+                    </tr>
+        
+        `;
+    })
+    </script>
+</html>

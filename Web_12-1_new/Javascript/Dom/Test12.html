@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="demo">For Loop</h1>
+    <input type="button" id="btn" value="click me">
+</body>
+<script>
+   var btn=document.getElementById("btn");
+   btn.onclick=function(){
+    var demo=document.querySelector(".demo");
+    var i,txt="";
+    for(i=1;i<=10;i++){
+      txt=txt+i+" ";
+    }
+    demo.innerHTML=txt;
+   }
+</script>
+</html>

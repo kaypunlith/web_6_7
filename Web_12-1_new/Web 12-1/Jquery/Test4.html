@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./file_jq.js"></script>
+</head>
+<body>
+    <label for="">Input</label><br>
+    <input type="text" id="in"><br>
+    <label for="">Output</label><br>
+    <input type="text" id="ou">
+    <button id="btn">Add</button>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+             var txt=$("#in").val();
+             $("#ou").val(txt);
+        })
+    })
+</script>
+</html>

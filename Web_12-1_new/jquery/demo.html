@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <img src="/photo/coffee1.jpeg" class="img" data-p1="/photo/coffee2.jpeg" data-p2="/photo/coffee1.jpeg" alt="">
+    <img src="/photo/coffee4.jpeg" class="img" data-p1="/photo/coffee6.jpeg" data-p2="/photo/coffee4.jpeg" alt="">
+</body>
+<script>
+    $(document).ready(function(){
+        $(".img").mouseover(function(){
+             var eThis=$(this);
+             var p1=eThis.data("p1");
+            eThis.attr("src",p1)
+        })
+        $(".img").mouseleave(function(){
+            var eThis=$(this);
+             var p2=eThis.data("p2");
+            eThis.attr("src",p2)
+        })
+    })
+</script>
+</html>

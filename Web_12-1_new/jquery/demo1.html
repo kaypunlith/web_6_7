@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+    .demo{
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    button{
+        padding: 10px;
+    }
+</style>
+<body>
+    <input type="text" class="txt">
+    <input type="text" class="res">
+    <div class="demo"><h1>Hello </h1></div>
+
+    <button type="button" id="btn">hide</button>
+    <button type="button" id="btn1">show</button>
+    <button type="button" id="btn3">hide/show</button>
+    <button type="button" id="btn4">Text</button>
+    <button type="button" id="btn5">Val</button>
+    <button type="button" id="btn6">css</button>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+        //    $(".demo").hide();
+        //    $(".demo").slideUp();
+              $(".demo").fadeOut()
+        })
+        $("#btn1").click(function(){
+            // $(".demo").show();
+            // $(".demo").slideDown();
+            $(".demo").fadeIn();
+        })
+        $("#btn3").click(function(){
+            // $(".demo").toggle();
+            // $(".demo").slideToggle();
+            $(".demo").fadeToggle();
+        })
+        $("#btn4").click(function(){
+             $(".demo").text("Test2");
+             $(".demo").html("<h1>Test2</h1>");
+        })
+        $("#btn5").click(function(){
+        //   var txt=$(".txt").val();
+        //   $(".demo").html('<h1>'+txt+'<h1>');
+
+            //  $(".demo").html($(".txt").val());
+            var txt=$(".txt");
+            $(".res").val(txt.val());
+        })
+        $("#btn6").click(function(){
+            $(".demo").css({"background-color":"black"});
+            $(".demo").css({"color":"white"});
+        })
+    })
+</script>
+</html>

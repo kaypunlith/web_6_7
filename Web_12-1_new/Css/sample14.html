@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .contan{
+            width:100%;
+            height: 100vh;
+            background-color: red;
+            background-image: url('/image/bg1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .navbar{
+            width: 100%;
+            /* height:60px; */
+            background-color:white;
+            box-shadow: 1px 1px 5px 0px black;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar ul{
+          display: flex;
+        }
+        .navbar ul li{
+            list-style-type: none;
+        }
+        .navbar ul li a{
+            display: block;
+            padding: 15px;
+            color:black     ;
+            font-size: 22px;
+            text-decoration: none;
+            z-index: 99999;
+        }
+        .navbar ul .search-box{
+            background-color: blue;
+            width:250px;
+            display: flex;
+            height:60%;
+            margin-top:8px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .navbar ul .search-box .search{
+            width: 70%;
+            height: 100%;
+            background-color:rgb(209, 199, 199);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar ul .search-box .search input{
+            background: none;
+            border: none;
+            outline: none;
+        }
+        .navbar ul .search-box .btn-search{
+            width: 30%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color:orange;
+        }
+        .navbar ul .search-box .btn-search button{
+            background: none;
+            border: none;
+            color: white;
+        }
+        .navbar ul .logo a{
+            font-size:27px;
+            font-weight: bold;
+        }
+        .popup{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.135);
+        }
+        .txt-box{
+          position: absolute;
+          width: 500px;
+          height: 300px;
+          /* background-color: red; */
+          top:20%;
+          left:100px;
+        }
+        .txt-box h1{
+            font-size:60px;
+        }
+        .txt-box h1 span{
+            color:rgb(250, 197, 4);
+        }
+        .txt-box p{
+            font-size:22px;
+        }
+        .txt-box button{
+            padding: 20px 30px;
+            margin-top: 10px;
+            background-color:rgb(250, 197, 4) ;
+            font-size: 22px;
+            color: white;
+            border-radius: 8px;
+        }
+        .txt-box button:hover{
+            background-color:rgb(236, 201, 74)  ;
+        }
+        .box-form{
+            width:300px;
+            height:400px;
+            background-color: rgba(0, 0, 0, 0.492);
+            position: absolute;
+            right:100px;
+            border-radius: 10px;
+            top:40%;
+        }
+        .box-form .login{
+            width: 80%;
+            height: 35px;
+            border-radius: 8px;
+        
+            background-color: white;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .box-form .login button{
+            width: 100%;
+            height: 100%;
+            color: orange;
+            background: none;
+            border: none;
+            font-size: 22px;
+            font-weight: bold;
+        
+        }
+        .box-form .fld_form{
+            width:80%;
+            /* height: 50px; */
+            /* background-color: red; */
+            margin: auto;
+        }
+        .box-form .fld_form input{
+            background:none;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            outline: none;
+            color: white;
+        }
+        .box-form .fld_form input::placeholder{
+            color: aliceblue;
+        }
+        .box-form .fld_form .fld{
+            border-bottom: 1px solid orange;
+            display: flex;
+        }
+        .box-form .fld_form .fld i{
+            margin-top:20px;
+            color: white;
+        }
+        .login2{
+            margin: auto;
+            width: 80%;
+            height: 35px;
+            background-color:orange;
+            border-radius: 8px;
+            margin: auto;
+            margin-top: 15px;
+        }
+        .login2 button{
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+        .box-form p{
+            text-align: center;
+            margin-top: 5px;
+            color: white;
+        }
+        .box-icon{
+            width: 80%;
+            height:40px;
+            margin: auto;
+            /* background-color: red; */
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .box-icon .icon{
+            width:19%;
+            height: 100%;
+            /* background-color: blue; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-icon .icon i{
+           font-size:27px;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="popup"></div>
+    <div class="contan">
+        <div class="navbar">
+            <ul>
+                <li class="logo">
+                    <a href="">PraRos</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Contac</a>
+                </li>
+                <li>
+                    <a href="">Profile</a>
+                </li>
+                <li>
+                    <a href="">Other</a>
+                </li>
+            </ul>
+            <ul>
+                <div class="search-box">
+                    <div class="search">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="btn-search">
+                        <button>Search</button>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="txt-box">
+            <h1>Web Design & <br> <span>Development</span> <br> Course</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi magni doloremque dolorem perspiciatis asperiores fuga, dicta necessitatibus assumenda officia harum magnam eum! Perspiciatis ipsa corrupti a? Expedita vel cupiditate blanditiis.</p>
+            <button>Join with ME</button>
+        </div>
+        <div class="box-form">
+            <div class="login">
+                <button>Login</button>
+            </div>
+            <div class="fld_form">
+                <div class="fld">
+                    <input type="email" placeholder="Enter email...">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="fld">
+                    <input type="email" placeholder="Enter email...">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+            </div>
+            <div class="login2">
+                <button>Login</button>
+            </div>
+            <p>Don't have an acount </p>
+            <p>Sign Up Here</p>
+            <p>login with</p>
+            <div class="box-icon">
+               <div class="icon"><i class="fa-brands fa-square-github"></i></div>
+               <div class="icon"><i class="fa-brands fa-tiktok"></i></div>
+               <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+               <div class="icon"><i class="fa-brands fa-telegram"></i></div>
+               <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

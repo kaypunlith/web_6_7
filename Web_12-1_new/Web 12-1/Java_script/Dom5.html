@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/Java_script/Img/dog1.webp"  id="Img"alt="" onmouseover="Demo()" onmouseleave="Demo1()" >
+   
+</body>
+<script>
+    // var i=0;
+    // document.getElementById("btn").addEventListener("click",function(){
+    //    if(i==0){
+    //      document.getElementById("Img").setAttribute("src","/Java_script/Img/dog2.jpeg");
+    //      i=1;
+    //    }else{
+    //       document.getElementById("Img").setAttribute("src","/Java_script/Img/dog1.webp");
+    //       i=0;
+    //    }
+    // })
+    function Demo(){
+        // alert(123);
+        document.getElementById("Img").setAttribute("src","/Java_script/Img/dog2.jpeg");
+    }
+    function Demo1(){
+         document.getElementById("Img").setAttribute("src","/Java_script/Img/dog1.webp");
+    }
+</script>
+</html>

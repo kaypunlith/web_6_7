@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1 id="demo">For of Loop</h1>
+    <button type="button" id="btn">Click Me</button>
+</head>
+<body>
+    <script>
+        var txt=""
+        document.getElementById("btn").addEventListener("click",function(){
+            const Colors=["red","blue","green","pink","yallow"];
+             for(i of Colors){
+            console.log(i);
+            txt+=i+" ";
+        }
+        document.getElementById("demo").innerHTML=txt;
+        })
+        //homwork
+        for( key in Colors){
+            console.log(Colors[key]);
+        }
+    </script>
+</body>
+</html>

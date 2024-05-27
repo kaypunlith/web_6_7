@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .Menu{
+        background-color: red;
+        float: left;
+        width: 100%;
+    }
+    .Menu ul{
+        list-style-type: none;
+    }
+    .Menu ul li {
+        float: left;
+        position:relative;
+    }
+    .Menu ul li a{
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+    }
+.Menu ul li .sub{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    display: none;
+}
+.Menu ul li:hover .sub{
+    display: block;
+}
+.Menu ul li .sub li a{
+    display: block;
+}
+.Menu ul li .sub li:hover{
+background-color: blue;
+}
+.Menu ul li::before{
+    content: '';
+   height: 3px;
+   background-color: blue;
+   margin: 0;
+}
+.Menu ul li::before:hover{
+    width: 100%;
+}
+
+
+</style>
+<body>
+    <div class="Menu">
+        <ul>
+            <li>
+                <a href="">Home</a>
+                <ul class="sub">
+                    <li>
+                        <a href="">Home1</a>
+                    </li>
+                    <li>
+                        <a href="">Home3</a>
+                    </li>
+                    <li>
+                        <a href="">Home4</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">About</a>
+                <ul class="sub">
+                    <li>
+                        <a href="">Home1</a>
+                    </li>
+                    <li>
+                        <a href="">Home3</a>
+                    </li>
+                    <li>
+                        <a href="">Home4</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Contect</a>
+                <ul class="sub">
+                    <li>
+                        <a href="">Home1</a>
+                    </li>
+                    <li>
+                        <a href="">Home3</a>
+                    </li>
+                    <li>
+                        <a href="">Home4</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Profile</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

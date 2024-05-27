@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   input score 1 <input type="text" id="sc1"><br><br>
+   input score 2 <input type="text" id="sc2"><br><br>
+   input score 3 <input type="text" id="sc3"><br><br>
+   Total <input type="text" id="total"><br><br>
+   Average <input type="text" id="avg"><br><br>
+   Grand <input type="text" id="grand">
+   <button type="button" id="btn">Post</button>
+
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+        document.getElementById("total").value=Total();
+        document.getElementById("avg").value=Average();
+        document.getElementById("grand").value=Grand();
+        document.getElementById("total").value="";
+        document.getElementById("avg").value="";
+        document.getElementById("grand").value="";
+    })
+    function Total(){
+        var sc1=document.getElementById("sc1").value;
+        var sc2=document.getElementById("sc2").value;
+        var sc3=document.getElementById("sc3").value; 
+        var total=Number(sc1)+Number(sc2)+Number(sc3);
+        return total;
+    }
+    function Average(){
+        return Total()/3;
+    }
+    function Grand(){
+        let grand=Average();
+        if(grand>50 && grand<=60){
+            grand="E";
+        }else if(grand>60 && grand<=70){
+            grand="D"
+        }
+        else if(grand>70 && grand<=80){
+            grand="C"
+        }
+        else if(grand>80 && grand<=90){
+            grand="B"
+        }
+        else if(grand>90 && grand<=100){
+            grand="A"
+        }
+        return grand;
+    }
+</script>
+</html>
